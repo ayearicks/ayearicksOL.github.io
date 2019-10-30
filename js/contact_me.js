@@ -8,10 +8,9 @@ $(function() {
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
-      var name = $("input#name").val();
-      var email = $("input#email").val();
-      var phone = $("input#phone").val();
-      var message = $("textarea#message").val();
+      var name = $("input#entry.2005620554").val();
+      var email = $("input#entry.1045781291").val();
+      var message = $("textarea#entry.1065046570").val();
       var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(' ') >= 0) {
@@ -20,11 +19,10 @@ $(function() {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "https://formspree.io/mdonaorn",
-        type: "POST",
+        url: "https://script.google.com/macros/s/AKfycbxIqnCYCE1Yf8Eu8az3lKeqFXSwjRle9XPgERsGLhnfHywWrUw/exec",
+        method: "GET",
         data: {
           name: name,
-          phone: phone,
           email: email,
           message: message
         },
