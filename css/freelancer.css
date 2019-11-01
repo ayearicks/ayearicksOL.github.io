@@ -183,6 +183,16 @@ a:hover {
   text-decoration: underline;
 }
 
+button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 a:not([href]):not([tabindex]) {
   color: inherit;
   text-decoration: none;
@@ -250,6 +260,7 @@ label {
 button {
   border-radius: 0;
 }
+
 
 button:focus {
   outline: 1px dotted;
