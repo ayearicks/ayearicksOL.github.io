@@ -1,0 +1,67 @@
+// Custom Variables
+$blue: #1c86ee; 
+$green: #41a34d;
+$gray: #787878;
+$gray-400: #ced4da;
+$darkBlue: #23354f;
+$white: #fff;
+
+$poppins: 'Poppins', sans-serif;
+$sourceCode: 'Source Code Pro', monospace;
+
+// Body Styles
+body {
+  background: $gray;
+  color: $darkBlue;
+  font-family: $poppins;
+}
+
+// Main Container
+div.main {
+  background: $white;
+  margin: 5rem;
+  border-radius: 8rem;
+  max-width: 90%;
+  min-height: 80vh;
+}
+
+
+// Navigation
+nav.navbar {
+  height: 6.5rem;
+
+  // Avatar Image Link
+  a.navbar-brand {
+    margin-top: -2rem;
+    margin-left: -8rem;
+
+    img {
+      max-width: 80%;
+    }
+  }
+
+  // Navigation Links
+  ul.navbar-nav {
+    font-size: 24px;
+    font-family: $sourceCode;
+    border-bottom: 1px solid $gray-400;
+
+    a.nav-link {
+      color: $darkBlue;
+
+      &:hover, &:active {
+        color: $blue;
+        margin-bottom: -1rem;
+        border-bottom: 5px solid $green;
+      }
+
+    }
+
+  }
+}
+
+
+// Content Container
+div#content {
+  margin-top: 6rem;
+}
