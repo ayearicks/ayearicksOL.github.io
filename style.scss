@@ -5,13 +5,14 @@ $gray: #787878;
 $gray-400: #ced4da;
 $darkBlue: #23354f;
 $white: #fff;
+$black: #000;
 
 $poppins: 'Poppins', sans-serif;
 $sourceCode: 'Source Code Pro', monospace;
 
 // Body Styles
 body {
-  background: $gray;
+  background: $green;
   color: $darkBlue;
   font-family: $poppins;
 }
@@ -32,7 +33,6 @@ nav.navbar {
 
   // Avatar Image Link
   a.navbar-brand {
-    margin-top: -2rem;
     margin-left: -8rem;
 
     img {
@@ -47,10 +47,10 @@ nav.navbar {
     border-bottom: 1px solid $gray-400;
 
     a.nav-link {
-      color: $darkBlue;
+      color: $black;
 
       &:hover, &:active {
-        color: $blue;
+        color: $gray;
         margin-bottom: -1rem;
         border-bottom: 5px solid $green;
       }
@@ -64,4 +64,51 @@ nav.navbar {
 // Content Container
 div#content {
   margin-top: 6rem;
+}
+
+// Homepage Screen Styles
+section#home {
+
+  h1.introHead {
+    font-weight: 700;
+    font-size: 44px;
+  }
+
+  span.myName {
+    color: $blue;
+  }
+
+  span.highlightLetter {
+    color: $green;
+  }
+
+  p.introText {
+    font-size: 20px;
+    line-height: 2.5rem;
+  }
+
+  img.mainPageScreen {
+    border: 2px dashed $gray;
+    border-radius: 20px;
+  }
+}
+
+// Project Styles
+section#projects {
+
+}
+
+// About Styles
+section#about {
+
+}
+
+// Resume Styles
+section#resume {
+
+}
+
+// Contact Styles
+section#contact {
+  
 }

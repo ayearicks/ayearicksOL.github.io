@@ -1,5 +1,5 @@
 body {
-  background: #787878;
+  background: #41a34d;
   color: #23354f;
   font-family: "Poppins", sans-serif;
 }
@@ -17,7 +17,6 @@ nav.navbar {
 }
 
 nav.navbar a.navbar-brand {
-  margin-top: -2rem;
   margin-left: -8rem;
 }
 
@@ -32,15 +31,38 @@ nav.navbar ul.navbar-nav {
 }
 
 nav.navbar ul.navbar-nav a.nav-link {
-  color: #23354f;
+  color: #000;
 }
 
 nav.navbar ul.navbar-nav a.nav-link:hover, nav.navbar ul.navbar-nav a.nav-link:active {
-  color: #1c86ee;
+  color: #787878;
   margin-bottom: -1rem;
   border-bottom: 5px solid #41a34d;
 }
 
 div#content {
   margin-top: 6rem;
+}
+
+section#home h1.introHead {
+  font-weight: 700;
+  font-size: 44px;
+}
+
+section#home span.myName {
+  color: #1c86ee;
+}
+
+section#home span.highlightLetter {
+  color: #41a34d;
+}
+
+section#home p.introText {
+  font-size: 20px;
+  line-height: 2.5rem;
+}
+
+section#home img.mainPageScreen {
+  border: 2px dashed #787878;
+  border-radius: 20px;
 }

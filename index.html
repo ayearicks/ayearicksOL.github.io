@@ -22,7 +22,7 @@
 
   </head>
 
-    <body id="top">
+    <body>
 
       <!-- Main Container -->
       <div class="container-fluid main mx-auto">
@@ -42,19 +42,19 @@
             <div class="collapse navbar-collapse" id="hamburgerNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item pr-3">
-                  <a class="nav-link" href="#top">Home</a>
+                  <a class="nav-link" href="#home" id="homeLink">Home</a>
                 </li>
                 <li class="nav-item pr-3">
-                  <a class="nav-link" href="#projects">Projects</a>
+                  <a class="nav-link" href="#projects" id="projectLink">Projects</a>
                 </li>
                 <li class="nav-item pr-3">
-                  <a class="nav-link" href="#about">About</a>
+                  <a class="nav-link" href="#about" id="aboutLink">About</a>
                 </li>
                 <li class="nav-item pr-3">
-                  <a class="nav-link" href="#resume">Resume</a>
+                  <a class="nav-link" href="#resume" id="resumeLink">Resume</a>
                 </li>
                 <li class="nav-item pr-3">
-                  <a class="nav-link" href="#contact">Contact</a>
+                  <a class="nav-link" href="#contact" id="contactLink">Contact</a>
                 </li>
               </ul>
             </div>
@@ -72,17 +72,23 @@
             <div class="row">
               <div class="col-6">
                 <div class="container">
-                  <h1>Hey! I'm <span class="myName">Ashley Yearicks</span>.</h1>
+                  <h1 class="introHead text-center">
+                    Hey!<br>
+                     I'm <span class="myName">Ashley Yearicks</span>
+                    </h1>
                   
-                  <h3>I am a <span class="highlightLetter">W</span>eb <span class="highlightLetter">D</span>eveloper.</h3>
+                  <h3 class="text-center">
+                    <span class="highlightLetter">W</span>eb <span class="highlightLetter">D</span>eveloper
+                  </h3>
                   
-                  <p>I enjoy taking ideas and bringing them to life. Have a look at my current projects, and let's discuss how great of an addition I will be to your engineer team.</p>
+                  <p class="introText text-justify pt-5">I enjoy taking ideas and bringing them to life. Have a look at my current projects, and let's discuss how great of an addition I will be to your engineer team.</p>
                 </div>
               </div>
 
               <div class="col-6">
-                <div class="container">
+                <div class="container pt-3">
                   <img src="assets/img/liveDrums.png" alt="Screenshot picture of a drumming website" class="mainPageScreen w-100">
+                  <p class="caption text-center">drumset project</p>
                 </div>
               </div>
             </div>
@@ -204,7 +210,7 @@
       <!-- End Main Container -->
 
     <!-- Copyright Section -->
-    <section class="copyright py-4 text-center text-white">
+    <section class="copyright text-center text-white mt-n5">
       <div class="container">
         <small>Copyright &copy; Ashley Yearicks 2019-2020</small>
       </div>
