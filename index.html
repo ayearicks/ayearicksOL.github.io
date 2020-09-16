@@ -4,224 +4,226 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Junior javascript web developer always looking for a new project to dive into.">
+    <meta name="description" content="A web developer always looking for a new project to dive into.">
     <meta name="author" content="Ashley Yearicks">
 
     <title>Freelance Web Developer</title>
 
-   <!-- Google Fonts -->
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-
-   <!-- Font Awesome -->
-   <script src="https://kit.fontawesome.com/e822198573.js" crossorigin="anonymous"></script>
-   <!-- Bootstrap -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-   <!-- Custom Styles -->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e822198573.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
   </head>
 
     <body>
 
-      <!-- Main Container -->
-      <div class="container-fluid main mx-auto">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-sm" id="mainNavbar">
+        <div class="container">
+          <!-- Hamburger Button for Mobile -->
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#responsive" aria-controls="hamburgerNav" aria-expanded="false" aria-label="Toggle Navigation">
+            <i class="fas fa-bars"></i>
+          </button>
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-sm">
-          <div class="container">
-            <!-- Add Aria Controls -->
-            <a class="navbar-brand" href="#top"><img src="assets/img/avatarMe.svg" alt="Cartoon image of Ashley Yearicks"></a>
-
-            <!-- Hamburger Button for Mobile -->
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#responsive" aria-controls="hamburgerNav" aria-expanded="false" aria-label="Toggle Navigation">
-              <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Right Navigation Links -->
-            <div class="collapse navbar-collapse" id="hamburgerNav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item pr-3">
-                  <a class="nav-link" href="#home" id="homeLink">Home</a>
-                </li>
-                <li class="nav-item pr-3">
-                  <a class="nav-link" href="#projects" id="projectLink">Projects</a>
-                </li>
-                <li class="nav-item pr-3">
-                  <a class="nav-link" href="#about" id="aboutLink">About</a>
-                </li>
-                <li class="nav-item pr-3">
-                  <a class="nav-link" href="#resume" id="resumeLink">Resume</a>
-                </li>
-                <li class="nav-item pr-3">
-                  <a class="nav-link" href="#contact" id="contactLink">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <!-- End Navigation Links -->
+          <!-- Right Navigation Links -->
+          <div class="collapse navbar-collapse" id="hamburgerNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item pr-3">
+                <a class="nav-link" href="#home" id="homeLink">Home</a>
+              </li>
+              <li class="nav-item pr-3">
+                <a class="nav-link" href="#projects" id="projectLink">Projects</a>
+              </li>
+              <li class="nav-item pr-3">
+                <a class="nav-link" href="#about" id="aboutLink">About</a>
+              </li>
+              <li class="nav-item pr-3">
+                <a class="nav-link" href="#resume" id="resumeLink">Resume</a>
+              </li>
+              <li class="nav-item pr-3">
+                <a class="nav-link" href="#contact" id="contactLink">Contact</a>
+              </li>
+            </ul>
           </div>
-          <!-- End Navigation Container -->
-        </nav>
-        <!-- End Navigation -->
-
-        <!-- Content -->
-        <div class="container" id="viewContent">
-
-          <!-- Homepage Screen -->
-          <section id="home" class="d-flex">
-            <div class="row">
-              <div class="col-6">
-                <div class="container">
-                  <h1 class="introHead text-center">
-                    Hey!<br>
-                     I'm <span class="myName">Ashley Yearicks</span>
-                    </h1>
-                  
-                  <h3 class="text-center">
-                    <span class="highlightLetter">W</span>eb <span class="highlightLetter">D</span>eveloper
-                  </h3>
-                  
-                  <p class="introText text-justify pt-5">I enjoy taking ideas and bringing them to life. Have a look at my current projects, and let's discuss how great of an addition I will be to your engineer team.</p>
-                </div>
-              </div>
-
-              <div class="col-6">
-                <div class="container pt-3">
-                  <img src="assets/img/liveDrums.png" alt="Screenshot picture of a drumming website" class="mainPageScreen w-100">
-                  <p class="caption text-center">drumset project</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- End Homepage Screen -->
-
-          <!-- Projects -->
-          <section id="projects" class="d-none">
-
-            <div class="row">
-              <div class="col-md-6 col-lg-4">
-                <div class="project1 mx-auto" data-toggle="modal" data-target="#modal1">
-                  <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                    <div class="portfolio-item-caption-content text-center text-white">
-                      <i class="fas fa-plus fa-3x"></i>
-                    </div>
-                  </div>
-                  <img class="img-fluid" src="img/portfolio/drumsedit.png" alt="Cartoon image of a drum">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-lg-4">
-                <div class="project1 mx-auto" data-toggle="modal" data-target="#modal1">
-                  <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                    <div class="portfolio-item-caption-content text-center text-white">
-                      <i class="fas fa-plus fa-3x"></i>
-                    </div>
-                  </div>
-                  <img class="img-fluid" src="img/portfolio/drumsedit.png" alt="Cartoon image of a drum">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-lg-4">
-                <div class="project1 mx-auto" data-toggle="modal" data-target="#modal1">
-                  <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                    <div class="portfolio-item-caption-content text-center text-white">
-                      <i class="fas fa-plus fa-3x"></i>
-                    </div>
-                  </div>
-                  <img class="img-fluid" src="img/portfolio/drumsedit.png" alt="Cartoon image of a drum">
-                </div>
-              </div>
-
-              <div class="col-md-6 col-lg-4">
-                <div class="project1 mx-auto" data-toggle="modal" data-target="#modal1">
-                  <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                    <div class="portfolio-item-caption-content text-center text-white">
-                      <i class="fas fa-plus fa-3x"></i>
-                    </div>
-                  </div>
-                  <img class="img-fluid" src="img/portfolio/drumsedit.png" alt="Cartoon image of a drum">
-                </div>
-              </div>
-
-            </div>
-
-
-          </section>
-          <!-- End Projects -->
-
-          <!-- About Me -->
-          <section id="about" class="d-none">
-            <div class="row">
-              <div class="col-lg-4 ml-auto">
-                <p class="lead">I'm a developer that can bring your ideas to life. From static webpages for your growing business, to fully functional web-apps, I always try to bring a fresh perspective to 
-                  everything I do. 
-                </p>
-              </div>
-              <div class="col-lg-4 mr-auto">
-                <p class="lead">I am very passionate about code and taking things apart to discover how they work. I lean more towards back-end with my skills, but am constantly evolving my design decisions. 
-                  <a href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" target="_blank" style="color: white; font-weight: 700;" >Contact me</a> and let's work together!
-                </p>
-              </div>
-            </div>
-
-          </section>
-          <!-- End About Me -->
-
-          <!-- Resume -->
-          <section id="resume" class="d-none">
-            <div class="row">
-              <div class="col-12 ml-auto text-center">
-                <p class="lead mb-0 mt-5">You can access my credentials here: </p>
-                <p style="font-size: 20px;"><a href="/AshleyYearicks.html">Résumé (HTML)</a> | <a href="/AshleyYearicks.pdf">Résumé (PDF)</a>.</p>
-              </div>
-          </div>
-          </section>
-          <!-- End Resume -->
-
-          <!-- Contact -->
-          <section id="contact" class="d-none">
-            <div class="row">
-              <!-- Contact Footer Social Icons -->
-              <div class="col-12 mb-5 mb-lg-0">
-                <h4 class="text-uppercase mb-4">Contact Me</h4>
-                <a class="btn btn-outline-light btn-social mx-1" href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" target="_blank">
-                  <i class="fas fa-fw fa-envelope"></i>
-                </a>
-                <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/Jessarin5">
-                  <i class="fab fa-fw fa-twitter"></i>
-                </a>
-                <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/ayearicks" target="_blank">
-                  <i class="fab fa-fw fa-github"></i>
-                </a>
-                <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/ashley-yearicks" target="_blank">
-                  <i class="fab fa-fw fa-linkedin-in"></i>
-                </a>
-              </div>
-    
-            </div>
-          </section>
-          <!-- End Contact -->
-
+          <!-- End Navigation Links -->
         </div>
-        <!-- End Content -->
+        <!-- End Navigation Container -->
+      </nav>
+      <!-- End Navigation -->
+
+      <!-- Main Container -->
+      <div class="container main mx-auto">
+
+        <!-- Home Screen -->
+        <section id="home" class="text-center">
+          <div class="container">
+            <img src="assets/img/avatarMe.svg" class="my-5" alt="Cartoon image of Ashley Yearicks"></a>
+            
+            <h1 class="introHead text-center">
+              Hey!<br>
+              I'm <span class="myName">Ashley Yearicks</span>
+            </h1>
+            
+            <h3 class="text-center pb-2">
+              <span class="highlightLetter">W</span>eb <span class="highlightLetter">D</span>eveloper
+            </h3>
+                
+            <p class="introText text-center pt-5">I enjoy taking ideas and bringing them to life. Have a look at my current projects, and let's discuss how great of an addition I will be to your engineer team.</p>
+          </div>
+          
+          <div class="container pt-5 text-center">
+            <img src="assets/img/screenCaps/liveDrums.png" alt="Screenshot picture of a drumming website" class="mainPageScreen w-50 mb-1">
+            <p class="caption text-center">Drumset project</p>
+          </div>
+        </section>
+        <!-- End Home Screen -->
+
+        <hr class="divider">
+
+        <!-- Projects -->
+        <section id="projects" class="text-center pb-5">
+          <div class="container">
+            <h2>Projects</h2>
+            <p class="caption text-center">(click to view)</p>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <!-- 1 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-2 mb-2 mx-auto">
+                <div class="projectCap mx-auto" data-toggle="modal" data-target="#project1">
+                  <img class="img-fluid" src="assets/img/screenCaps/drumlessons.jpg" alt="Screen caption of a music lesson website">
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-2 mb-2 mx-auto">
+                <div class="projectCap mx-auto" data-toggle="modal" data-target="#project2">
+                  <img class="img-fluid" src="assets/img/screenCaps/liveDrums.png" alt="Screen caption of a drum kit web app">
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-2 mb-2 mx-auto">
+                <div class="projectCap mx-auto" data-toggle="modal" data-target="#project3">
+                  <img class="img-fluid" src="assets/img/screenCaps/farmtotable.png" alt="Screen caption of a farm restaurant website">
+                </div>
+              </div>
+              <!-- 4 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-2 mb-2 mx-auto">
+                <div class="projectCap mx-auto" data-toggle="modal" data-target="#project3">
+                  <img class="img-fluid" src="assets/img/screenCaps/farmtotable.png" alt="Screen caption of a farm restaurant website">
+                </div>
+              </div>
+              <!-- 5 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-2 mb-2 mx-auto">
+                <div class="projectCap mx-auto" data-toggle="modal" data-target="#project3">
+                  <img class="img-fluid" src="assets/img/screenCaps/farmtotable.png" alt="Screen caption of a farm restaurant website">
+                </div>
+              </div>
+              <!-- 6 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-2 mb-2 mx-auto">
+                <div class="projectCap mx-auto" data-toggle="modal" data-target="#project3">
+                  <img class="img-fluid" src="assets/img/screenCaps/farmtotable.png" alt="Screen caption of a farm restaurant website">
+                </div>
+              </div>
+              <!-- 7 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-2 mb-2 mx-auto">
+                <div class="projectCap mx-auto" data-toggle="modal" data-target="#project3">
+                  <img class="img-fluid" src="assets/img/screenCaps/farmtotable.png" alt="Screen caption of a farm restaurant website">
+                </div>
+              </div>
+              <!-- 8 -->
+              <div class="col-sm-12 col-md-6 col-lg-4 mt-2 mb-2 mx-auto">
+                <div class="projectCap mx-auto" data-toggle="modal" data-target="#project3">
+                  <img class="img-fluid" src="assets/img/screenCaps/farmtotable.png" alt="Screen caption of a farm restaurant website">
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </section>
+        <!-- End Projects -->
+
+        <hr class="divider">
+
+        <!-- About Me -->
+        <section id="about">
+          <h3 class="text-center mb-5 mt-0">About Me</h3>
+          <div class="row">
+            <div class="col-lg-4 ml-auto">
+              <p class="info">I'm a developer that can bring your ideas to life. From static webpages for your growing business, to fully functional web-apps, I always try to bring a fresh perspective to 
+                everything I do. 
+              </p>
+            </div>
+            <div class="col-lg-4 mr-auto">
+              <p class="info">I am very passionate about code and taking things apart to discover how they work. I lean more towards back-end with my skills, but am constantly evolving my design decisions. 
+                <a href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" target="_blank">Contact me</a> and let's work together!
+              </p>
+            </div>
+          </div>
+
+        </section>
+        <!-- End About Me -->
+
+        <hr class="divider">
+
+        <!-- Resume -->
+        <section id="resume">
+          <div class="row">
+            <div class="col-12 ml-auto text-center">
+              <h3>Work History</h3>
+              <p class="lead mb-0 mt-5">You can access my credentials here: </p>
+              <p style="font-size: 20px;"><a href="assets/resume/AshleyYearicks.pdf">Résumé (PDF)</a> | <a href="assets/resume/AshleyYearicks.html">Résumé (HTML)</a>.</p>
+            </div>
+        </div>
+        </section>
+        <!-- End Resume -->
+
+        <hr class="divider">
+
+        <!-- Contact -->
+        <section id="contact" class="text-center mb-5 pb-5">
+          <div class="row">
+            <div class="col-12">
+              <h4 class="text-uppercase mb-4">Contact Me</h4>
+              <p class="pb-3">I look forward to working with you!</p>
+            </div>
+            <!-- Contact Footer Social Icons -->
+            <div class="col-12 mb-5 mb-lg-0">
+              <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" target="_blank">
+                <i class="fas fa-fw fa-envelope"></i>
+              </a>
+              <a class="btn btn-outline-secondary btn-social mx-1" href="https://twitter.com/Jessarin5">
+                <i class="fab fa-fw fa-twitter"></i>
+              </a>
+              <a class="btn btn-outline-secondary btn-social mx-1" href="https://github.com/ayearicks" target="_blank">
+                <i class="fab fa-fw fa-github"></i>
+              </a>
+              <a class="btn btn-outline-secondary btn-social mx-1" href="https://www.linkedin.com/in/ashley-yearicks" target="_blank">
+                <i class="fab fa-fw fa-linkedin-in"></i>
+              </a>
+            </div>
+  
+          </div>
+        </section>
+        <!-- End Contact -->
 
       </div>
       <!-- End Main Container -->
 
     <!-- Copyright Section -->
-    <section class="copyright text-center text-white mt-n5">
+    <section class="copyright text-center text-white mt-n4 pb-5">
       <div class="container">
         <small>Copyright &copy; Ashley Yearicks 2019-2020</small>
       </div>
     </section>
     </body>
-
-
-        <!-- Subtitle -->
-        <!-- <p class="subtitle">Web Developer - Javascript Neophyte - Knowledge Seeker</p> -->
-        
-
-
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-to-top d-lg-none position-fixed ">
@@ -230,9 +232,10 @@
       </a>
     </div>
 
-    <!-- Project Modals -->
 
-    <!-- 1 -->
+    <!-- Modals for Project Section -->
+
+    <!-- Project1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
       <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">

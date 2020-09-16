@@ -1,59 +1,141 @@
+/* Custom Variables */
+:root {
+  /* Colors */
+  --blue: #1c86ee;
+  --green: #41a34d;
+  --gray: #787878;
+  --gray-400: #ced4da;
+  --darkBlue: #23354f;
+  --white: #fff;
+  --black: #000;
+
+  /* Fonts */
+  --dosis: 'Dosis', sans-serif;
+  --openSans: 'Open Sans', sans-serif;
+}
+
+/* Body Blanket Styles */
 body {
-  background: #41a34d;
-  color: #23354f;
-  font-family: "Poppins", sans-serif;
+  background: var(--green);
+  color: var(--darkBlue);
+  font-family: var(--openSans);
 }
 
-div.main {
-  background: #fff;
-  margin: 5rem;
-  border-radius: 8rem;
-  max-width: 90%;
-  min-height: 80vh;
-}
+ h1, h2, h3, h4, h5 {
+   font-family: var(--dosis);
+   font-weight: 700;
+ }
 
+ .divider {
+   width: 25%;
+   margin: 5rem auto;
+   border-top: 2.5px solid var(--blue);
+ }
+
+
+/* Navigation */
 nav.navbar {
-  height: 6.5rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  transition: transform 0.7s ease;
+  z-index: 9;
 }
+
+.navbar.scrolled {
+  background: var(--black);
+  transition: background 100ms;
+}
+
 nav.navbar a.navbar-brand {
   margin-left: -8rem;
 }
+
 nav.navbar a.navbar-brand img {
   max-width: 80%;
 }
+
+/* Navigation Links */
 nav.navbar ul.navbar-nav {
   font-size: 24px;
-  font-family: "Source Code Pro", monospace;
-  border-bottom: 1px solid #ced4da;
+  font-family: var(--libreB);
+  border-bottom: 1px solid var(--gray-400);
 }
+
 nav.navbar ul.navbar-nav a.nav-link {
-  color: #000;
+  color: var(--black);
 }
+
 nav.navbar ul.navbar-nav a.nav-link:hover, nav.navbar ul.navbar-nav a.nav-link:active {
-  color: #787878;
+  color: var(--gray);
   margin-bottom: -1rem;
-  border-bottom: 5px solid #41a34d;
+  border-bottom: 5px solid var(--green);
 }
 
-div#content {
-  margin-top: 6rem;
+
+/* Main Container */
+div.main {
+  background: var(--white);
+  margin-top: 10vh;
+  border-radius: 8rem;
+  max-width: 90%;
 }
 
+
+/* Home Screen Styles */
 section#home h1.introHead {
   font-weight: 700;
   font-size: 44px;
 }
 section#home span.myName {
-  color: #1c86ee;
+  color: var(--blue);
+}
+section#home h3 {
+  font-weight: 700;
 }
 section#home span.highlightLetter {
-  color: #41a34d;
+  color: var(--green);
 }
 section#home p.introText {
   font-size: 20px;
   line-height: 2.5rem;
 }
 section#home img.mainPageScreen {
-  border: 2px dashed #787878;
+  border: 2px dashed var(--gray);
   border-radius: 20px;
+}
+
+
+/* Projects Styling */
+section#projects div.container p.caption {
+  font-size: 12px;
+}
+section#projects div.projectCap {
+  border: 8px solid var(--gray);
+  border-radius: 20px;
+}
+section#projects div.projectCap img{
+  border-radius: 10px;
+}
+
+
+/* About Styling */
+section#about p.info a {
+  text-decoration: none;
+  color: var(--green);
+  font-weight: 700;
+}
+
+
+/* Resume Styling */
+section#resume a {
+  text-decoration: none;
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* Contact Styling */
+section#contact a.btn-social {
+  font-size: 1.5rem;
 }
