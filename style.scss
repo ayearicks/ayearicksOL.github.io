@@ -6,9 +6,10 @@ $gray-400: #ced4da;
 $darkBlue: #23354f;
 $white: #fff;
 $black: #000;
-
+// Fonts
 $poppins: 'Poppins', sans-serif;
 $sourceCode: 'Source Code Pro', monospace;
+
 
 // Body Styles
 body {
@@ -16,6 +17,7 @@ body {
   color: $darkBlue;
   font-family: $poppins;
 }
+
 
 // Main Container
 div.main {
@@ -66,6 +68,7 @@ div#content {
   margin-top: 6rem;
 }
 
+
 // Homepage Screen Styles
 section#home {
 
@@ -93,20 +96,24 @@ section#home {
   }
 }
 
+
 // Project Styles
 section#projects {
 
 }
+
 
 // About Styles
 section#about {
 
 }
 
+
 // Resume Styles
 section#resume {
 
 }
+
 
 // Contact Styles
 section#contact {

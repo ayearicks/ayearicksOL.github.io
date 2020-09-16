@@ -6,7 +6,7 @@ var home = document.getElementById("homeLink"),
     about = document.getElementById("aboutLink"),
     resume = document.getElementById("resumeLink"),
     contact = document.getElementById("contactLink"),
-    content = document.getElementById("content"); // Event Listeners for each navigation button
+    viewContent = document.getElementById("viewContent"); // Event Listeners for each navigation button
 
 home.addEventListener("click", function () {
   pageChange(this.getAttribute("href"));
@@ -34,13 +34,13 @@ function pageChange(tar) {
   */
   switch (tar) {
     case '#home':
-      document.getElementById("home").classList.toggle("d-none");
-      document.getElementById("home").classList.add("d-flex");
+      home.classList.toggle("d-none");
+      home.classList.add("d-flex");
       break;
 
     case '#projects':
-      document.getElementById("projects").classList.toggle("d-none");
-      document.getElementById("projects").classList.toggle("d-flex");
+      projects.classList.toggle("d-none");
+      projects.classList.toggle("d-flex");
       break;
 
     case '#about':
