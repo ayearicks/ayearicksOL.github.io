@@ -10,7 +10,7 @@
     <title>Freelance Web Developer</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700&family=Cabin:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e822198573.js" crossorigin="anonymous"></script>
@@ -21,39 +21,90 @@
 
   </head>
 
-    <body>
+    <body id="home">
 
       <!-- Navigation -->
-      <nav class="navbar navbar-expand-sm" id="mainNavbar">
-        <div class="container">
-          <!-- Hamburger Button for Mobile -->
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#responsive" aria-controls="hamburgerNav" aria-expanded="false" aria-label="Toggle Navigation">
-            <i class="fas fa-bars"></i>
-          </button>
+      <nav class="navbar" id="mainNavbar">
 
-          <!-- Right Navigation Links -->
-          <div class="collapse navbar-collapse" id="hamburgerNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item pr-3">
+          <!-- Top Menu Navigation Links -->
+          <div class="d-inline" id="topNav">
+            <ul class="navbar-nav ml-md-auto text-center">
+              <li class="nav-item pr-md-3 d-none d-sm-block ">
                 <a class="nav-link" href="#home" id="homeLink">Home</a>
               </li>
-              <li class="nav-item pr-3">
+              <li class="nav-item pr-md-3">
                 <a class="nav-link" href="#projects" id="projectLink">Projects</a>
               </li>
-              <li class="nav-item pr-3">
+              <li class="nav-item pr-md-3">
                 <a class="nav-link" href="#about" id="aboutLink">About</a>
               </li>
-              <li class="nav-item pr-3">
+              <li class="nav-item pr-md-3">
                 <a class="nav-link" href="#resume" id="resumeLink">Resume</a>
               </li>
-              <li class="nav-item pr-3">
+              <li class="nav-item pr-md-3">
                 <a class="nav-link" href="#contact" id="contactLink">Contact</a>
               </li>
             </ul>
           </div>
+
+          <!-- Left Menu Navigation Links -->
+          <div class="d-block" id="leftNav">
+            <ul class="navbar-nav ml-md-auto text-center">
+              <li class="nav-item pr-md-3">
+                <a class="nav-link" href="#home" id="homeLink">Home</a>
+              </li>
+              <li class="nav-item pr-md-3">
+                <a class="nav-link" href="#projects" id="projectLink">Projects</a>
+              </li>
+              <li class="nav-item pr-md-3">
+                <a class="nav-link" href="#about" id="aboutLink">About</a>
+              </li>
+              <li class="nav-item pr-md-3">
+                <a class="nav-link" href="#resume" id="resumeLink">Resume</a>
+              </li>
+              <li class="nav-item pr-md-3">
+                <a class="nav-link" href="#contact" id="contactLink">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bottom Menu Navigation Links -->
+          <div class="d-flex" id="bottomNav">
+            <ul class="navbar-nav flex-row">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">
+                  <i class="fas fa-home icon"></i>
+                  Home
+                </a>
+              </li>
+              <li class="nav-item pr-md-3">
+                <a class="nav-link" href="#projects">
+                  <i class="fas fa-folder-open icon"></i>
+                  Projects
+                </a>
+              </li>
+              <li class="nav-item pr-md-3">
+                <a class="nav-link" href="#about">
+                  <i class="fas fa-address-card icon"></i>
+                  About
+                </a>
+              </li>
+              <li class="nav-item pr-md-3">
+                <a class="nav-link" href="#resume">
+                  <i class="far fa-file icon"></i>
+                  Resume
+                </a>
+              </li>
+              <li class="nav-item pr-md-3">
+                <a class="nav-link" href="#contact">
+                  <i class="fas fa-mail-bulk icon"></i>
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
           <!-- End Navigation Links -->
-        </div>
-        <!-- End Navigation Container -->
+
       </nav>
       <!-- End Navigation -->
 
@@ -70,15 +121,14 @@
               I'm <span class="myName">Ashley Yearicks</span>
             </h1>
             
-            <h3 class="text-center pb-2">
-              <span class="highlightLetter">W</span>eb <span class="highlightLetter">D</span>eveloper
+            <h3 class="text-center pb-2 pt-1">Web Developer
             </h3>
                 
             <p class="introText text-center pt-5">I enjoy taking ideas and bringing them to life. Have a look at my current projects, and let's discuss how great of an addition I will be to your engineer team.</p>
           </div>
           
           <div class="container pt-5 text-center">
-            <img src="assets/img/screenCaps/liveDrums.png" alt="Screenshot picture of a drumming website" class="mainPageScreen w-50 mb-1">
+            <img src="assets/img/screenCaps/liveDrums.png" alt="Screenshot picture of a drumming website" class="mainPageScreen mb-1">
             <p class="caption text-center">Drumset project</p>
           </div>
         </section>
@@ -163,7 +213,7 @@
             </div>
             <div class="col-lg-4 mr-auto">
               <p class="info">I am very passionate about code and taking things apart to discover how they work. I lean more towards back-end with my skills, but am constantly evolving my design decisions. 
-                <a href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" target="_blank">Contact me</a> and let's work together!
+                <a href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" target="_blank" class="greenLinks">Contact me</a> and let's work together!
               </p>
             </div>
           </div>
@@ -179,7 +229,7 @@
             <div class="col-12 ml-auto text-center">
               <h3>Work History</h3>
               <p class="lead mb-0 mt-5">You can access my credentials here: </p>
-              <p style="font-size: 20px;"><a href="assets/resume/AshleyYearicks.pdf">Résumé (PDF)</a> | <a href="assets/resume/AshleyYearicks.html">Résumé (HTML)</a>.</p>
+              <p style="font-size: 20px;"><a href="assets/resume/AshleyYearicks.pdf" class="greenLinks">Résumé (PDF)</a> | <a href="assets/resume/AshleyYearicks.html" class="greenLinks">Résumé (HTML)</a>.</p>
             </div>
         </div>
         </section>

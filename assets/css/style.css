@@ -1,39 +1,386 @@
-/* Custom Variables */
+/* ~~ CUSTOM VARIABLES */
 :root {
   /* Colors */
   --blue: #1c86ee;
-  --green: #41a34d;
+  --green: #47aa81;
   --gray: #787878;
-  --gray-400: #ced4da;
   --darkBlue: #23354f;
+  --offWhite: #d8e6e1;
   --white: #fff;
   --black: #000;
 
   /* Fonts */
-  --dosis: 'Dosis', sans-serif;
-  --openSans: 'Open Sans', sans-serif;
+  --bioRhyme: 'BioRhyme', serif;
+  --cabin: 'Cabin', sans-serif;
 }
 
-/* Body Blanket Styles */
+
+/* ~~ UNIVERSAL STYLES */
 body {
   background: var(--green);
   color: var(--darkBlue);
-  font-family: var(--openSans);
+  font-family: var(--cabin);
 }
 
  h1, h2, h3, h4, h5 {
-   font-family: var(--dosis);
+   font-family: var(--bioRhyme);
    font-weight: 700;
  }
 
- .divider {
-   width: 25%;
-   margin: 5rem auto;
-   border-top: 2.5px solid var(--blue);
- }
+.divider {
+  width: 25%;
+  margin: 5rem auto;
+  border-top: 2.5px solid var(--blue);
+}
 
+ .grayBackground {
+   background-color: var(--gray);
+}
+
+ .greenLinks {
+  text-decoration: none;
+  color: var(--green);
+  font-weight: 700;
+}
+
+
+
+ /* ~~ Viewport <=576px */
+ .divider {
+   width: 50%;
+  }
+ 
+  /* ~~ NAVIGATION <576px */
+  
+    .navbar {
+      width: 100%;
+      height: 60px;
+      background-color: var(--gray);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    /* Hide Unused Navigation Bars */
+    #topNav {
+      display: none !important;
+    }
+    #leftNav {
+      display: none !important;
+    }
+
+    #bottomNav .nav-item {
+      border-right: 2px solid var(--darkBlue);
+      padding-left: 1rem;
+    }
+
+    #bottomNav .nav-item:nth-last-of-type() {
+      border-right: none;
+    }
+
+    #bottomNav .nav-link {
+      font-size: 12px;
+      font-family: var(--cabin);
+      color: var(--black);
+    }
+    
+    #bottomNav .nav-link:active {
+      background-color: var(--green);
+    }
+
+    .icon {
+      font-size: 26px;
+      vertical-align: center;
+      color: var(--offWhite);
+    }
+    
+    
+    /* ~~ MAIN <576px */
+    .main {
+      background: var(--offWhite);
+      margin-top: 2.5vh;
+      border-radius: 5rem;
+      max-width: 90%;
+    }
+    
+    
+    /* ~~ HOME  <576px */
+    .introHead {
+      font-weight: 700;
+      font-size: 44px;
+    }
+    .myName {
+      color: var(--blue);
+    }
+    section#home h3 {
+      font-weight: 700;
+    }
+    .introText {
+      font-size: 20px;
+      line-height: 2.5rem;
+    }
+    .mainPageScreen {
+      width: 100%;
+      border: 2px dashed var(--gray);
+      border-radius: 20px;
+    }
+    
+    
+    /* ~~ PROJECTS <576px */
+    .caption {
+      font-size: 12px;
+    }
+    .projectCap {
+      border: 8px solid var(--gray);
+      border-radius: 20px;
+    }
+    .projectCap img{
+      border-radius: 10px;
+    }
+
+    /* Contact Styling */
+    .btn-social {
+      font-size: 1.5rem;
+    }
+    
+
+/* ~~ 576px+ */
+ 
+/* ~~ NAVIGATION 576px+ */
+@media (min-width: 576px) {
+  
+  /* Navigation Links */
+  .fa-bars {
+    font-size: 32px;
+  }
+  
+}
+
+ /* 768px+ */
+ 
+/* Navigation */
+@media (min-width: 768px) {
+  nav.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    transition: transform 0.7s ease;
+    z-index: 9;
+  }
+  
+  .navbar.scrolled {
+    background: var(--black);
+    transition: background 100ms;
+  }
+  
+  nav.navbar a.navbar-brand {
+    margin-left: -8rem;
+  }
+  
+  nav.navbar a.navbar-brand img {
+    max-width: 80%;
+  }
+  
+  /* Navigation Links */
+  nav.navbar ul.navbar-nav {
+    font-size: 24px;
+    font-family: var(--libreB);
+    border-bottom: 1px solid var(--gray-400);
+  }
+  
+  nav.navbar ul.navbar-nav a.nav-link {
+    color: var(--black);
+  }
+  
+  nav.navbar ul.navbar-nav a.nav-link:hover, nav.navbar ul.navbar-nav a.nav-link:active {
+    margin-bottom: -1rem;
+    border-bottom: 5px solid var(--green);
+  }
+  
+  
+  /* Main Container */
+  div.main {
+    background: var(--white);
+    margin-top: 10vh;
+    border-radius: 8rem;
+    max-width: 90%;
+  }
+  
+  
+  /* Home Screen Styles */
+  section#home h1.introHead {
+    font-weight: 700;
+    font-size: 44px;
+  }
+  section#home span.myName {
+    color: var(--blue);
+  }
+  section#home h3 {
+    font-weight: 700;
+  }
+  section#home span.highlightLetter {
+    color: var(--green);
+  }
+  section#home p.introText {
+    font-size: 20px;
+    line-height: 2.5rem;
+  }
+  section#home img.mainPageScreen {
+    border: 2px dashed var(--gray);
+    border-radius: 20px;
+  }
+  
+  
+  /* Projects Styling */
+  section#projects div.container p.caption {
+    font-size: 12px;
+  }
+  section#projects div.projectCap {
+    border: 8px solid var(--gray);
+    border-radius: 20px;
+  }
+  section#projects div.projectCap img{
+    border-radius: 10px;
+  }
+  
+  
+  /* About Styling */
+  section#about p.info a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 700;
+  }
+  
+  
+  /* Resume Styling */
+  section#resume a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 700;
+  }
+  
+  /* Contact Styling */
+  section#contact a.btn-social {
+    font-size: 1.5rem;
+  }
+  }
+
+ /* 992px+ */
+ 
+/* Navigation */
+@media (min-width: 992px) {
+  nav.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    transition: transform 0.7s ease;
+    z-index: 9;
+  }
+  
+  .navbar.scrolled {
+    background: var(--black);
+    transition: background 100ms;
+  }
+  
+  nav.navbar a.navbar-brand {
+    margin-left: -8rem;
+  }
+  
+  nav.navbar a.navbar-brand img {
+    max-width: 80%;
+  }
+  
+  /* Navigation Links */
+  nav.navbar ul.navbar-nav {
+    font-size: 24px;
+    font-family: var(--libreB);
+    border-bottom: 1px solid var(--gray-400);
+  }
+  
+  nav.navbar ul.navbar-nav a.nav-link {
+    color: var(--black);
+  }
+  
+  nav.navbar ul.navbar-nav a.nav-link:hover, nav.navbar ul.navbar-nav a.nav-link:active {
+    margin-bottom: -1rem;
+    border-bottom: 5px solid var(--green);
+  }
+  
+  
+  /* Main Container */
+  div.main {
+    background: var(--white);
+    margin-top: 10vh;
+    border-radius: 8rem;
+    max-width: 90%;
+  }
+  
+  
+  /* Home Screen Styles */
+  section#home h1.introHead {
+    font-weight: 700;
+    font-size: 44px;
+  }
+  section#home span.myName {
+    color: var(--blue);
+  }
+  section#home h3 {
+    font-weight: 700;
+  }
+  section#home span.highlightLetter {
+    color: var(--green);
+  }
+  section#home p.introText {
+    font-size: 20px;
+    line-height: 2.5rem;
+  }
+  section#home img.mainPageScreen {
+    border: 2px dashed var(--gray);
+    border-radius: 20px;
+  }
+  
+  
+  /* Projects Styling */
+  section#projects div.container p.caption {
+    font-size: 12px;
+  }
+  section#projects div.projectCap {
+    border: 8px solid var(--gray);
+    border-radius: 20px;
+  }
+  section#projects div.projectCap img{
+    border-radius: 10px;
+  }
+  
+  
+  /* About Styling */
+  section#about p.info a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 700;
+  }
+  
+  
+  /* Resume Styling */
+  section#resume a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: 700;
+  }
+  
+  /* Contact Styling */
+  section#contact a.btn-social {
+    font-size: 1.5rem;
+  }
+  }
+
+ /* 1200px+ */
 
 /* Navigation */
+@media (min-width: 1200px) {
 nav.navbar {
   position: fixed;
   left: 0;
@@ -41,6 +388,7 @@ nav.navbar {
   width: 100vw;
   transition: transform 0.7s ease;
   z-index: 9;
+  background-color: transparent;
 }
 
 .navbar.scrolled {
@@ -68,7 +416,6 @@ nav.navbar ul.navbar-nav a.nav-link {
 }
 
 nav.navbar ul.navbar-nav a.nav-link:hover, nav.navbar ul.navbar-nav a.nav-link:active {
-  color: var(--gray);
   margin-bottom: -1rem;
   border-bottom: 5px solid var(--green);
 }
@@ -102,6 +449,7 @@ section#home p.introText {
   line-height: 2.5rem;
 }
 section#home img.mainPageScreen {
+  width: 50%;
   border: 2px dashed var(--gray);
   border-radius: 20px;
 }
@@ -138,4 +486,5 @@ section#resume a {
 /* Contact Styling */
 section#contact a.btn-social {
   font-size: 1.5rem;
+}
 }
