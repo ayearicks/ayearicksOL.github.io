@@ -60,6 +60,7 @@ body {
       bottom: 0;
       left: 0;
       z-index: 2;
+      padding: 0;
     }
 
     /* Hide Unused Navigation Bars */
@@ -70,28 +71,33 @@ body {
       display: none !important;
     }
 
-    #bottomNav .nav-item {
+    .navbar-nav {
+      width: 95vw;
+    }
+
+    .nav-item {
       border-right: 2px solid var(--darkBlue);
-      padding-left: 1rem;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
     }
 
-    #bottomNav .nav-item:nth-last-of-type() {
-      border-right: none;
-    }
-
-    #bottomNav .nav-link {
-      font-size: 12px;
-      font-family: var(--cabin);
+    .nav-link {
+      height: 100%;
+      width: 100%;
+      text-align: center;
       color: var(--black);
     }
     
-    #bottomNav .nav-link:active {
+    .nav-link:hover, .nav-link:active {
       background-color: var(--green);
+      color: var(--darkBlue);
     }
 
     .icon {
       font-size: 26px;
-      vertical-align: center;
+      text-align: center;
       color: var(--offWhite);
     }
     
