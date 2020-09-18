@@ -4,6 +4,7 @@
   --blue: #1c86ee;
   --green: #47aa81;
   --gray: #787878;
+  --lightGray: #BDBDBD;
   --darkBlue: #23354f;
   --offWhite: #d8e6e1;
   --white: #fff;
@@ -85,7 +86,8 @@ body {
 
     .nav-link {
       height: 100%;
-      width: 100%;
+      width: 65%;
+      margin: 0 auto;
       text-align: center;
       color: var(--black);
     }
@@ -167,43 +169,52 @@ body {
  
 /* Navigation */
 @media (min-width: 768px) {
-  nav.navbar {
-    position: fixed;
-    left: 0;
+
+  .navbar {
     top: 0;
-    width: 100vw;
-    transition: transform 0.7s ease;
-    z-index: 9;
+    background-color: var(--lightGray);
   }
-  
-  .navbar.scrolled {
-    background: var(--black);
-    transition: background 100ms;
+
+  /* Hide Unused Navigation Bars */
+  #topNav {
+    display: inline-flex !important;
+    margin: 0 auto;
   }
-  
-  nav.navbar a.navbar-brand {
-    margin-left: -8rem;
+  #leftNav {
+    display: none !important;
   }
-  
-  nav.navbar a.navbar-brand img {
-    max-width: 80%;
+  #bottomNav {
+    display: none !important;
   }
+
   
   /* Navigation Links */
-  nav.navbar ul.navbar-nav {
-    font-size: 24px;
-    font-family: var(--libreB);
-    border-bottom: 1px solid var(--gray-400);
+  .navbar-nav {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .nav-item:last-child {
+    border-right: 0;
   }
   
-  nav.navbar ul.navbar-nav a.nav-link {
+  .nav-link {
+    width: 100%;
     color: var(--black);
   }
   
-  nav.navbar ul.navbar-nav a.nav-link:hover, nav.navbar ul.navbar-nav a.nav-link:active {
-    margin-bottom: -1rem;
-    border-bottom: 5px solid var(--green);
+  .navbar-nav {
+    width: 95vw;
   }
+
+  .nav-item {
+    border-right: 2px solid var(--darkBlue);
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  } 
+
   
   
   /* Main Container */

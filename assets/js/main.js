@@ -4,7 +4,7 @@ $(document).ready(function(){
     $(document).scroll(function(){
       let $nav = $("#mainNavbar");
       
-      // Move 768px+ Nav from Top to Left
+      // Move 768px+ Nav from Top to Left side of screen
       if ($(window).width() >= 768) {
         $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());      
       }
