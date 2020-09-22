@@ -18,7 +18,7 @@
 <body id="home">
 
   <!-- Main Container -->
-  <div class="container main">
+  <div class="container-fluid main">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md mt-3">
       <a class="navbar-brand" href="#home">AY</a>
@@ -32,39 +32,39 @@
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ml-auto ">
           <li class="nav-item px-4">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#home">Home</a>
           </li>
           <li class="nav-item px-4">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item px-4">
-            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-success" href="#">Contact</a>
+            <a class="nav-link btn btn-success" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
 
     <!-- Heading -->
-    <div class="container hero pt-5">
+    <div class="container-fluid hero pt-5">
       <div class="row">
         <div class="col-md-6 heroLeft d-flex flex-column">
           <h2>Hi!</h2>
           <h1>I'm <span id="name">Ashley Yearicks</span></h1>
           <h3>Web Developer</h3>
         </div>
-        <div class="col-md-6 text-right">
+        <div class="col-md-6 text-center my-auto heroRight">
           <img src="assets/img/avatarMe.svg" id="avatarMe">
         </div>
       </div>
     </div>
 
     <!-- About -->
-    <div class="container" id="about">
-      <div class="row">
-        <div class="col-md-6">
+    <div class="container-fluid" id="about">
+      <div class="row pt-5">
+        <div class="col-md-6 pl-5">
           <h3 class="text-left text-uppercase">Tech Stack</h3>
           <div class="container">
             <div class="row pt-4">
@@ -89,9 +89,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 pr-5">
           <h3 class="text-right text-uppercase">About Me</h3>
-          <div class="container aboutText pt-4 text-justify">
+          <div class="container aboutText pt-5 text-justify">
             <p>
               I'm a developer that can bring your ideas to life. From static webpages for your growing business, to fully functional web-apps, I always try to bring a fresh perspective to everything I do.
             </p>
@@ -104,7 +104,7 @@
     </div>
 
     <!-- Projects -->
-    <div class="container" id="projects">
+    <div class="container-fluid pt-4" id="projects">
       <h2 class="text-uppercase">Projects</h2>
 
       <!-- Crystal Gems Crime Fighting Agency -->
@@ -114,10 +114,11 @@
             <img src="assets/img/screenCaps/crystalGems.png" class="projectScreen">
           </a>
         </div>
-        <div class="col order-md-1 order-2">
-          <h3 class="pb-5">Crystal Gems Crime Fighting Agency</h3>
-          <p class="projectText pb-3">
+        <div class="col order-md-1 order-2 d-flex flex-column justify-content-between">
+          <h3 class="text-left">Crystal Gems Crime Fighting Agency</h3>
+          <p class="projectText">
             This is a mock sign-up website for the cartoon Steven Universe&copy;. Responsive for all viewport sizes.
+            <br>
             Coded with HTML and CSS.
           </p>
           <div class="text-left">
@@ -129,13 +130,13 @@
 
       <!-- Huddle Landing Page -->
       <div class="row projects secondary">
-        <div class="col order-md-1 order-1 text-left">
+        <div class="col order-md-1 order-1 text-left pl-5">
           <a href="https://ayearicks.github.io/Huddle-Landing-Page/" target="_blank">
             <img src="assets/img/screenCaps/huddleLanding.png" class="projectScreen">
           </a>
         </div>
-        <div class="col order-md-2 order-2">
-          <h3 class="pb-4 text-right">Huddle Landing Page</h3>
+        <div class="col order-md-2 order-2 d-flex flex-column justify-content-between pr-5">
+          <h3 class="text-right">Huddle Landing Page</h3>
           <p class="projectText pb-3">
             Huddle Landing Page is a coding challenge by <a href="https://www.frontendmentor.io/" target="_blank" class="greenLinks">Frontend Mentor</a>. Made from a supplied image file and made responsive to the device widths requested. Coded with HTML, CSS, and Bootstrap.
           </p>
@@ -153,8 +154,8 @@
             <img src="assets/img/screenCaps/bookmarkLanding.png" class="projectScreen">
           </a>
         </div>
-        <div class="col order-md-1 order-2">
-          <h3 class="pb-4">Bookmark Landing Page</h3>
+        <div class="col order-md-1 order-2 d-flex flex-column justify-content-between">
+          <h3 class="text-left">Bookmark Landing Page</h3>
           <p class="projectText pb-3">
             'Bookmark' Landing page is another coding challenge by <a href="https://www.frontendmentor.io" target="_blank" class="greenLinks">Frontend Mentor</a>. Coded with HTML, CSS, and Jquery, and optimized for 375px and 1440px viewports.
           </p>
@@ -167,13 +168,13 @@
 
       <!-- Farm Restaurant -->
       <div class="row projects secondary">
-        <div class="col order-md-1 order-1 text-left">
+        <div class="col order-md-1 order-1 text-left pl-5">
           <a href="https://ayearicks.github.io/FarmRestaurant/" target="_blank">
             <img src="assets/img/screenCaps/farmToTable.png" class="projectScreen">
           </a>
         </div>
-        <div class="col order-md-2 order-2">
-          <h3 class="pb-5 text-right">Farm To Table</h3>
+        <div class="col order-md-2 order-2 d-flex flex-column justify-content-between pr-5">
+          <h3 class="text-right">Farm To Table</h3>
           <p class="projectText pb-4">
             A fictitious website named 'Farm to Table' offers homegrown food for a 5 star dining experience. Responsive for all viewport sizes. Coded with HTML and CSS.
           </p>
@@ -191,8 +192,8 @@
             <img src="assets/img/screenCaps/drumKit.png" class="projectScreen">
           </a>
         </div>
-        <div class="col order-md-1 order-2">
-          <h3 class="pb-3 text-left">Drum Kit</h3>
+        <div class="col order-md-1 order-2 d-flex flex-column justify-content-between">
+          <h3 class="text-left">Drum Kit</h3>
           <p class="projectText pb-2">
             This is a project from <a href="https://javascript30.com" target="_blank" class="greenLinks">30 Days of Javascript</a> by Wes Bos. Originally a code-along exercise, I updated it to work with mobile devices and touch, in addition to PC keyboards. Coded with HTML, CSS, and Javascript. 
           </p>
@@ -205,13 +206,13 @@
 
       <!-- Rock Academy -->
       <div class="row projects secondary">
-        <div class="col order-md-1 order-1 text-left">
+        <div class="col order-md-1 order-1 text-left pl-5">
           <a href="https://ayearicks.github.io/RockAcademy/" target="_blank">
             <img src="assets/img/screenCaps/rockAcademy.png" class="projectScreen">
           </a>
         </div>
-        <div class="col order-md-2 order-2">
-          <h3 class="text-right pb-4">Rock Academy</h3>
+        <div class="col order-md-2 order-2 d-flex flex-column justify-content-between pr-5">
+          <h3 class="text-right">Rock Academy</h3>
           <p class="projectText pb-4">
             Rock Academy is a music lesson website targeted towards budding musicians of all ages. Responsive for all devices and coded with HTML, CSS and Jquery.
           </p>
@@ -225,17 +226,17 @@
     </div>
 
     <!-- Contact -->
-    <div class="container pt-5" id="contact">
+    <div class="container-fluid pt-5" id="contact">
+      <h2 class="text-uppercase text-center">Contact Me</h2>
       <div class="row">
         <div class="col-12 text-center pt-5">
-          <h2 class="text-uppercase">Contact Me</h2>
           <p class="pt-2">I look forward to working with you!</p>
-          <p style="font-size: 20px;">
-            <a href="assets/resume/AshleyYearicks.pdf" class="greenLinks">Résumé (PDF)</a> | <a href="assets/resume/AshleyYearicks.html" class="greenLinks">Résumé (HTML)</a>.
+          <p>
+            <a href="assets/resume/AshleyYearicks.pdf" class="blueLinks">Résumé (PDF)</a> | <a href="assets/resume/AshleyYearicks.html" class="blueLinks">Résumé (HTML)</a>.
           </p>
         
           <!-- Contact Footer Social Icons -->
-          <div class="col-12 mb-5 mb-lg-0 mx-auto">
+          <div class="col-12 pt-5 mx-auto">
             <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" target="_blank">
               <i class="fas fa-fw fa-envelope"></i>
             </a>
