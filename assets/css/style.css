@@ -17,12 +17,6 @@ h1, h2, h3, h4, h5 {
   color: var(--header);
   font-family: 'PT Serif', serif;
 }
-h3 {
-  font-size: 2rem;
-}
-h4 {
-  font-size: 1.5rem;
-}
 p {
   color: var(--paragraph);
   font-family: 'Poppins', sans-serif;
@@ -42,10 +36,10 @@ p {
   text-decoration: none;
 }
 
+/* Extra small devices (portrait phones, less than 576px) */
+
 /* Main Container */
 .main {
-  padding-left: 15rem;
-  padding-right: 15rem;
   background: linear-gradient(to right, rgba(30, 33, 37, 1), rgba(30, 33, 37, .8)), url("../img/dots.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -55,54 +49,57 @@ p {
 
 
 /* Navigation */
-.navbar-brand {
-  font-size: 40px;
-  color: var(--accentBlue);
+.logo {
+  max-width: 5rem;
+  padding-top: 1rem;
+}
+.hamburger {
+  color: var(--paragraph);
+  font-size: 30px;
+}
+#menu {
+  text-align: center;
+  background-color: var(--secondary);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .nav-link {
   font-family: 'Roboto Slab', serif;
   color: var(--paragraph);
-  font-size: 30px;
-}
-.nav-link:hover {
-  color: #fff;
+  font-size: 24px;
 }
 .btn-success {
   background-color: var(--accentGreen);
   color: #fff;
-}
-.btn-success:hover {
-  background-color: var(--accentBlue);
-  color: #fff;
+  width: 50%;
+  margin: 0 auto;
 }
 
 
 /* Heading */
 .hero {
-  height: 50vh;
+  height: 70vh;
 }
 .hero .row {
   min-height: 100%;
 }
 .heroLeft {
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 .heroLeft h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .heroLeft h1 {
-  font-size: 3.8rem;
-  margin: 1rem 0 2.5rem 0;
+  font-size: 2.8rem;
 }
 .heroLeft h3 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 #name {
   color: var(--accentGreen);
 }
 #avatarMe {
-  height: 25rem;
+  height: 15rem;
 }
 
 
@@ -118,6 +115,9 @@ p {
   color: var(--paragraph);
   font-size: 2rem;
 }
+.aboutMe {
+  margin-top: 5rem;
+}
 .aboutText p {
   font-size: 1.2rem;
 }
@@ -127,34 +127,31 @@ p {
 #projects {
   margin-top: 5rem;
 }
+.projects {
+  margin-top: 2rem;
+}
 #projects h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   border-bottom: 2.5px solid var(--header);
 }
 #projects h3 {
+  font-size: 1.5rem;
+  padding-top: 2rem;
   border-bottom: 2.5px solid var(--header);
-}
-.projects {
-  padding: 5rem 0;
-  margin: 2.5rem 0;
 }
 .projectScreen {
   max-width: 80%;
   border-radius: 20px;
 }
 .projectText {
-  text-align: justify;
-  font-size: 1.5rem;
+  text-align: left;
+  font-size: 1rem;
 }
 .projectLink {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Roboto Slab', serif;
   background-color: var(--accentBlue);
   color: var(--secondary);
-}
-.projectLink:hover {
-  background-color: var(--accentGreen);
-  color: var(--primary);
 }
 .secondary {
   background-color: var(--secondary);
@@ -165,11 +162,297 @@ p {
   margin-bottom: 5rem;
 }
 #contact h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 #contact p {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 .btn-social {
   font-size: 2rem;
+  margin: .5rem;
+}
+
+ /* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) { 
+
+  /* Navigation */
+  .logo {
+    max-width: 6.7rem;
+  }
+
+
+  /* Heading */
+  .heroLeft h2 {
+    font-size: 2.5rem;
+  }
+  .heroLeft h1 {
+    font-size: 3.2rem;
+  }
+  .heroLeft h3 {
+  font-size: 2rem;
+  }
+  #avatarMe {
+    height: 17rem;
+  }
+
+
+  /* About */
+  .tech {
+    max-width: 50%;
+  }
+
+
+  /* Projects */
+  .projectScreen {
+    max-width: 70%;
+  }
+  .projectText {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+
+  /* Contact */
+  .btn-social {
+    font-size: 1.7rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) { 
+
+  /* Navigation */
+  #menu {
+    background-color: transparent;
+  }
+  .nav-link {
+    font-size: 24px; 
+  }
+  .btn-success {
+    width: 100%;
+  }
+
+
+  /* Heading */
+  .hero {
+    height: 40vh;
+  }
+  .hero .row {
+    min-height: 80%;
+  }
+  .heroLeft {
+    justify-content: center;
+    align-items: center;
+  }
+  #avatarMe {
+    height: 15rem;
+  }
+
+
+  /* About */
+  .tech {
+    max-width: 70%;
+  }
+  .aboutMe {
+    margin-top: 0;
+  }
+  .aboutText p {
+    font-size: 1.2rem;
+  }
+
+
+  /* Projects */
+  .projects {
+    margin-top: 0;
+  }
+  .projectScreen {
+    max-width: 90%;
+  }
+  .projectText {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  .projectLink {
+    font-size: 1rem;
+  }
+  .screenXL {
+    max-width: 80%;
+  }
+  
+
+  /* Contact */
+  #contact h2 {
+    font-size: 2.5rem;
+  }
+  #contact p {
+    font-size: 1.5rem;
+  }
+
+}
+
+ /* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) { 
+  
+  /* Navigation */
+  .logo {
+    max-width: 10rem;
+  }
+  .nav-link:hover {
+    color: #fff;
+  }
+  .btn-success:hover {
+    background-color: var(--accentBlue);
+    color: #fff;
+  }
+
+
+  /* Heading */
+  .hero {
+    height: 60vh;
+  }
+  .heroLeft h1 {
+    font-size: 3.2rem;
+    margin: 1rem 0 2.5rem 0;
+  }
+  #avatarMe {
+    height: 20rem;
+  }
+
+
+  /* About */
+  .tech {
+    margin: 0;
+    padding: 0;
+  }
+  .techStack {
+    width: 4.8rem;
+    height: 4.5rem;
+  }
+  .aboutMe {
+    padding-right: 1rem;
+  }
+  .aboutText p {
+    font-size: 1rem;
+  }
+
+
+  /* Projects */
+  .projectText {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+  .projectScreen {
+    max-width: 80%;
+  }
+  .screenXL {
+    max-width: 70%;
+  }
+  .projectLink:hover {
+    background-color: var(--accentGreen);
+    color: var(--primary);
+  }
+ 
+}
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) { 
+  /* Main Container */
+  .main {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+
+  /* Navigation */
+  .nav-link {
+    font-size: 26px;
+  }
+
+
+  /* Heading */
+  .hero {
+    height: 60vh;
+  }
+  #avatarMe {
+    height: 22rem;
+  }
+
+
+  /* About */
+  .techStack {
+    width: 3.8rem;
+    height: 5.5rem;
+  }
+  .techName {
+    font-size: 1.5rem;
+  }
+  .aboutText p {
+    font-size: 1.1rem;
+  }
+
+
+  /* Projects */
+  #projects h2 {
+    font-size: 3rem;
+  }
+  #projects h3 {
+    font-size: 1.9rem;
+  }
+  .projectScreen {
+    max-width: 70%;
+    border-radius: 20px;
+  }
+  .screenXL {
+    max-width: 60%;
+  }
+  .projectText {
+    font-size: 1.3rem;
+  }
+  .projectLink {
+    font-size: 1.3rem;
+  }
+  .projectLink:hover {
+    background-color: var(--accentGreen);
+    color: var(--primary);
+  }
+
+
+  /* Contact */
+  #contact {
+    margin-bottom: 5rem;
+  }
+  #contact h2 {
+    font-size: 3rem;
+  }
+  #contact p {
+    font-size: 1.8rem;
+  }
+  .btn-social {
+    font-size: 2rem;
+  }
+}
+
+/* Very Large devices and 27' monitors */
+@media screen and (min-width: 1500px) {
+
+  /* About */
+  #about {
+    padding-bottom: 3rem;
+  }
+
+
+  /* Projects */
+  .projects {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+  .projectScreen {
+    max-width: 60%;
+    border-radius: 20px;
+  }
+  .screenXL {
+    max-width: 50%;
+  }
+
 }

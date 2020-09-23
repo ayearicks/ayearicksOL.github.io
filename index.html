@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto+Slab&family=Poppins:wght@500&display=swap" rel="stylesheet">
@@ -19,18 +19,21 @@
 
   <!-- Main Container -->
   <div class="container-fluid main">
+    
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md mt-3">
-      <a class="navbar-brand" href="#home">AY</a>
+    <nav class="navbar navbar-expand-md">
+      <a class="navbar-brand" href="#home">
+        <img src="assets/img/bubbleLogo.png" class="logo">
+      </a>
 
       <!-- Hamburger for Mobile Nav -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle Navigation Menu">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fa fa-bars hamburger"></i>
       </button>
 
       <!-- Menu Links -->
       <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ml-auto ">
+        <ul class="navbar-nav ml-md-auto">
           <li class="nav-item px-4">
             <a class="nav-link" href="#home">Home</a>
           </li>
@@ -48,14 +51,14 @@
     </nav>
 
     <!-- Heading -->
-    <div class="container-fluid hero pt-5">
+    <div class="container-fluid hero">
       <div class="row">
-        <div class="col-md-6 heroLeft d-flex flex-column">
+        <div class="col-12 col-md-6 order-md-1 order-2 heroLeft d-md-flex flex-md-column">
           <h2>Hi!</h2>
           <h1>I'm <span id="name">Ashley Yearicks</span></h1>
           <h3>Web Developer</h3>
         </div>
-        <div class="col-md-6 text-center my-auto heroRight">
+        <div class="col-12 col-md-6 order-md-2 order-1 text-center my-md-auto heroRight">
           <img src="assets/img/avatarMe.svg" id="avatarMe">
         </div>
       </div>
@@ -64,34 +67,34 @@
     <!-- About -->
     <div class="container-fluid" id="about">
       <div class="row pt-5">
-        <div class="col-md-6 pl-5">
-          <h3 class="text-left text-uppercase">Tech Stack</h3>
-          <div class="container">
+        <div class="col-md-6 pl-lg-5">
+          <h3 class="text-center text-lg-left text-uppercase">Tech Stack</h3>
+          <div class="container tech">
             <div class="row pt-4">
-              <div class="col-6 d-flex flex-row">
+              <div class="col-12 col-lg-6 d-flex flex-row">
                 <img src="assets/img/html.png" class="techStack">
                 <p class="techName my-auto pl-3">HTML</p>
               </div>
-              <div class="col-6 d-flex flex-row">
-                <img src="assets/img/css.png" class="techStack">
+              <div class="col-12 col-lg-6 d-flex flex-row pl-lg-5">
+                <img src="assets/img/css.png" class="techStack ml-xl-3">
                 <p class="techName my-auto pl-3">CSS</p>
               </div>
             </div>
-            <div class="row py-5">
-              <div class="col-6 d-flex flex-row">
+            <div class="row pt-xl-5">
+              <div class="col-12 col-xl-6 d-flex flex-row">
                 <img src="assets/img/javascript.png" class="techStack">
                 <p class="techName my-auto pl-3">JavaScript</p>
               </div>
-              <div class="col-6 d-flex flex-row pt-2">
-                <img src="assets/img/jquery.png" class="techStack">
+              <div class="col-12 col-xl-6 d-flex flex-row pt-lg-2">
+                <img src="assets/img/jquery.png" class="techStack ml-xl-5">
                 <p class="techName my-auto pl-3">JQuery</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6 pr-5">
-          <h3 class="text-right text-uppercase">About Me</h3>
-          <div class="container aboutText pt-5 text-justify">
+        <div class="col-md-6">
+          <h3 class="text-center text-lg-right text-uppercase aboutMe">About Me</h3>
+          <div class="container aboutText pb-2 pt-md-5 text-center text-md-right text-lg-justify">
             <p>
               I'm a developer that can bring your ideas to life. From static webpages for your growing business, to fully functional web-apps, I always try to bring a fresh perspective to everything I do.
             </p>
@@ -104,120 +107,120 @@
     </div>
 
     <!-- Projects -->
-    <div class="container-fluid pt-4" id="projects">
+    <div class="container-fluid pt-md-4" id="projects">
       <h2 class="text-uppercase">Projects</h2>
 
       <!-- Crystal Gems Crime Fighting Agency -->
-      <div class="row projects">
-        <div class="col order-md-2 order-1 text-right">
+      <div class="row projects pt-5 pb-md-5">
+        <div class="col-12 col-md-6 order-md-2 order-1 text-center text-lg-right my-md-auto">
           <a href="https://ayearicks.github.io/CrystalGems/" target="_blank">
             <img src="assets/img/screenCaps/crystalGems.png" class="projectScreen">
           </a>
         </div>
-        <div class="col order-md-1 order-2 d-flex flex-column justify-content-between">
-          <h3 class="text-left">Crystal Gems Crime Fighting Agency</h3>
+        <div class="col-12 col-md-6 order-md-1 order-2 d-md-flex flex-md-column justify-content-md-between">
+          <h3 class="text-center text-md-left">Crystal Gems Crime Fighting Agency</h3>
           <p class="projectText">
             This is a mock sign-up website for the cartoon Steven Universe&copy;. Responsive for all viewport sizes.
-            <br>
+            <br class="d-none d-lg-block">
             Coded with HTML and CSS.
           </p>
-          <div class="text-left">
-            <a href="https://ayearicks.github.io/CrystalGems/" target="_blank" class="btn projectLink mr-4">Live Version</a>
+          <div class="text-center text-md-left">
+            <a href="https://ayearicks.github.io/CrystalGems/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
             <a href="https://github.com/ayearicks/CrystalGems" target="_blank" class="btn projectLink">Source Code</a>
           </div>
         </div>
       </div>
 
       <!-- Huddle Landing Page -->
-      <div class="row projects secondary">
-        <div class="col order-md-1 order-1 text-left pl-5">
+      <div class="row projects secondary mb-md-5 mt-md-5">
+        <div class="col-12 col-md-6 order-md-1 order-1 text-center text-lg-left my-md-auto pt-3 pl-md-5">
           <a href="https://ayearicks.github.io/Huddle-Landing-Page/" target="_blank">
             <img src="assets/img/screenCaps/huddleLanding.png" class="projectScreen">
           </a>
         </div>
-        <div class="col order-md-2 order-2 d-flex flex-column justify-content-between pr-5">
-          <h3 class="text-right">Huddle Landing Page</h3>
+        <div class="col-12 col-md-6 order-md-2 order-2 d-md-flex flex-md-column justify-content-md-between pr-lg-5">
+          <h3 class="text-center text-md-right">Huddle Landing Page</h3>
           <p class="projectText pb-3">
             Huddle Landing Page is a coding challenge by <a href="https://www.frontendmentor.io/" target="_blank" class="greenLinks">Frontend Mentor</a>. Made from a supplied image file and made responsive to the device widths requested. Coded with HTML, CSS, and Bootstrap.
           </p>
-          <div class="text-right">
-            <a href="https://ayearicks.github.io/Huddle-Landing-Page/" target="_blank" class="btn projectLink mr-4">Live Version</a>
+          <div class="text-center text-md-right mb-3">
+            <a href="https://ayearicks.github.io/Huddle-Landing-Page/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
             <a href="https://github.com/ayearicks/Huddle-Landing-Page" target="_blank" class="btn projectLink">Source Code</a>
           </div>
         </div>
       </div>
 
       <!-- Bookmark Landing Page -->
-      <div class="row projects">
-        <div class="col order-md-2 order-1 text-right">
+      <div class="row projects mt-md-5 mb-md-5">
+        <div class="col-12 col-md-6 order-md-2 order-1 text-center text-lg-right my-md-auto">
           <a href="https://ayearicks.github.io/Bookmark-Landing-Page/" target="_blank">
             <img src="assets/img/screenCaps/bookmarkLanding.png" class="projectScreen">
           </a>
         </div>
-        <div class="col order-md-1 order-2 d-flex flex-column justify-content-between">
-          <h3 class="text-left">Bookmark Landing Page</h3>
-          <p class="projectText pb-3">
+        <div class="col-12 col-md-6 order-md-1 order-2 d-md-flex flex-md-column justify-content-md-between">
+          <h3 class="text-center text-md-left">Bookmark Landing Page</h3>
+          <p class="projectText">
             'Bookmark' Landing page is another coding challenge by <a href="https://www.frontendmentor.io" target="_blank" class="greenLinks">Frontend Mentor</a>. Coded with HTML, CSS, and Jquery, and optimized for 375px and 1440px viewports.
           </p>
-          <div class="text-left">
-            <a href="https://ayearicks.github.io/Bookmark-Landing-Page/" target="_blank" class="btn projectLink mr-4">Live Version</a>
+          <div class="text-center text-md-left">
+            <a href="https://ayearicks.github.io/Bookmark-Landing-Page/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
             <a href="https://github.com/ayearicks/Bookmark-Landing-Page" target="_blank" class="btn projectLink">Source Code</a>
           </div>
         </div>
       </div>
 
       <!-- Farm Restaurant -->
-      <div class="row projects secondary">
-        <div class="col order-md-1 order-1 text-left pl-5">
+      <div class="row projects secondary mt-md-5 mb-md-5">
+        <div class="col-12 col-md-6 order-md-1 order-1 text-center text-lg-left my-md-auto pt-3 pl-md-5">
           <a href="https://ayearicks.github.io/FarmRestaurant/" target="_blank">
-            <img src="assets/img/screenCaps/farmToTable.png" class="projectScreen">
+            <img src="assets/img/screenCaps/farmToTable.png" class="projectScreen screenXL">
           </a>
         </div>
-        <div class="col order-md-2 order-2 d-flex flex-column justify-content-between pr-5">
-          <h3 class="text-right">Farm To Table</h3>
-          <p class="projectText pb-4">
+        <div class="col-12 col-md-6 order-md-2 order-2 d-md-flex flex-md-column justify-content-md-between pr-lg-5">
+          <h3 class="text-center text-md-right">Farm To Table</h3>
+          <p class="projectText pb-3">
             A fictitious website named 'Farm to Table' offers homegrown food for a 5 star dining experience. Responsive for all viewport sizes. Coded with HTML and CSS.
           </p>
-          <div class="text-right">
-            <a href="https://ayearicks.github.io/FarmRestaurant/" target="_blank" class="btn projectLink mr-4">Live Version</a>
+          <div class="text-center text-md-right mb-3">
+            <a href="https://ayearicks.github.io/FarmRestaurant/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
             <a href="https://github.com/ayearicks/FarmRestaurant" target="_blank" class="btn projectLink">Source Code</a>
           </div>
         </div>
       </div>
 
       <!-- Drum Kit -->
-      <div class="row projects">
-        <div class="col order-md-2 order-1 text-right">
+      <div class="row projects mb-md-5 mt-md-5">
+        <div class="col-12 col-md-6 order-md-2 order-1 text-center text-lg-right my-md-auto">
           <a href="https://ayearicks.github.io/DrumKit/" target="_blank">
-            <img src="assets/img/screenCaps/drumKit.png" class="projectScreen">
+            <img src="assets/img/screenCaps/drumKit.png" class="projectScreen screenXL">
           </a>
         </div>
-        <div class="col order-md-1 order-2 d-flex flex-column justify-content-between">
-          <h3 class="text-left">Drum Kit</h3>
-          <p class="projectText pb-2">
+        <div class="col-12 col-md-6 order-md-1 order-2 d-md-flex flex-md-column justify-content-md-between">
+          <h3 class="text-center text-md-left">Drum Kit</h3>
+          <p class="projectText">
             This is a project from <a href="https://javascript30.com" target="_blank" class="greenLinks">30 Days of Javascript</a> by Wes Bos. Originally a code-along exercise, I updated it to work with mobile devices and touch, in addition to PC keyboards. Coded with HTML, CSS, and Javascript. 
           </p>
-          <div class="text-left">
-            <a href="https://ayearicks.github.io/DrumKit/" target="_blank" class="btn projectLink mr-4">Live Version</a>
+          <div class="text-center text-md-left">
+            <a href="https://ayearicks.github.io/DrumKit/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
             <a href="https://github.com/ayearicks/DrumKit" target="_blank" class="btn projectLink">Source Code</a>
           </div>
         </div>
       </div>
 
       <!-- Rock Academy -->
-      <div class="row projects secondary">
-        <div class="col order-md-1 order-1 text-left pl-5">
+      <div class="row projects secondary mb-md-5 mt-md-5">
+        <div class="col-12 col-md-6 order-md-1 order-1 text-center text-lg-left my-md-auto pt-3 pl-md-5">
           <a href="https://ayearicks.github.io/RockAcademy/" target="_blank">
-            <img src="assets/img/screenCaps/rockAcademy.png" class="projectScreen">
+            <img src="assets/img/screenCaps/rockAcademy.png" class="projectScreen screenXL">
           </a>
         </div>
-        <div class="col order-md-2 order-2 d-flex flex-column justify-content-between pr-5">
-          <h3 class="text-right">Rock Academy</h3>
-          <p class="projectText pb-4">
+        <div class="col-12 col-md-6 order-md-2 order-2 d-md-flex flex-md-column justify-content-md-between pr-lg-5">
+          <h3 class="text-center text-md-right">Rock Academy</h3>
+          <p class="projectText pb-3">
             Rock Academy is a music lesson website targeted towards budding musicians of all ages. Responsive for all devices and coded with HTML, CSS and Jquery.
           </p>
-          <div class="text-right">
-            <a href="https://ayearicks.github.io/RockAcademy/" target="_blank" class="btn projectLink mr-4">Live Version</a>
+          <div class="text-center text-md-right mb-3">
+            <a href="https://ayearicks.github.io/RockAcademy/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
             <a href="https://github.com/ayearicks/RockAcademy" target="_blank" class="btn projectLink">Source Code</a>
           </div>
         </div>
@@ -252,8 +255,6 @@
           </div>
         </div>
       </div>
-
-
 
     </div>
     
