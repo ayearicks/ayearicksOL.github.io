@@ -1,464 +1,148 @@
-/* Theme Colors */
+/* || - Jump to Section */
+
+
+
+/* || Global Declarations */
+
 :root {
-  --primary: #1e2125;
-  --secondary: #000;
-  --accentGreen: #66c342;
-  --accentBlue: #65c9ff;
-  --accentGray: #787878;
-  --paragraph: #a3abb4;
-  --header: #fff;
+  /* Theme Colors */
+  --pumpkin: #FF6D00;
+  --heatWave: #FF7900;
+  --darkOrange: #FF8500;
+  --yellowOrange: #FF9100;
+  --orangePeel: #FF9E00;
+  --russianViolet: #240046;
+  --persianIndigo: #3C096C;
+  --purple: #5A189A;
+  --frenchViolet: #7B2CBF;
+  --darkOrchid: #9D4EDD;  
+
+  /* Typography */
+  --sourceCode: 'Source Code Pro', monospace;
 }
 
-/* General Styles */
+
+/* || General Styles */
+
 body {
   height: 100%;
-}
-h1, h2, h3, h4, h5 {
-  color: var(--header);
-  font-family: 'PT Serif', serif;
-}
-p {
-  color: var(--paragraph);
-  font-family: 'Poppins', sans-serif;
-}
-.greenLinks {
-  color: var(--accentGreen);
-}
-.greenLinks:hover {
-  color: var(--accentBlue);
-  text-decoration: none;
-}
-.blueLinks {
-  color: var(--accentBlue);
-}
-.blueLinks:hover {
-  color: var(--accentGreen);
-  text-decoration: none;
+  background-color: var(--russianViolet);
+  font-family: var(--sourceCode);
 }
 
-
-/* Extra small devices (portrait phones, less than 576px) */
-
-/* Main Container */
-.main {
-  background: linear-gradient(to right, rgba(30, 33, 37, 1), rgba(30, 33, 37, .8)), url("../img/dots.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
+/* || <576px */
 
 
 /* Navigation */
-.logo {
-  max-width: 5rem;
-  padding-top: 1rem;
-  animation-delay: 1s;
-}
-.hamburger {
-  color: var(--paragraph);
-  font-size: 30px;
-}
-#menu {
-  text-align: center;
-  background-color: var(--secondary);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.nav-link {
-  font-family: 'Roboto Slab', serif;
-  color: var(--paragraph);
-  font-size: 24px;
-}
-.btn-success {
-  background-color: var(--accentGreen);
-  color: #fff;
-  width: 50%;
-  margin: 0 auto;
-}
+
+
 
 
 /* Heading */
-.hero {
-  height: 70vh;
-}
-.hero .row {
-  min-height: 100%;
-}
-.heroLeft {
-  text-align: center;
-}
-.heroLeft h2 {
-  font-size: 2rem;
-}
-.heroLeft h1 {
-  font-size: 2.8rem;
-}
-.heroLeft h3 {
-  font-size: 1.5rem;
-}
-#name {
-  color: var(--accentGreen);
-}
-#avatarMe {
-  height: 15rem;
-}
+
 
 
 /* About */
-#about {
-  background-color: var(--secondary);
-}
-.techStack {
-  width: 3.8rem;
-  height: 5.5rem;
-}
-.techName {
-  color: var(--paragraph);
-  font-size: 2rem;
-}
-.aboutMe {
-  margin-top: 5rem;
-}
-.aboutText p {
-  font-size: 1.2rem;
-}
+
 
 
 /* Projects */
-#projects {
-  margin-top: 5rem;
-}
-.projects {
-  margin-top: 2rem;
-}
-#projects h2 {
-  font-size: 2rem;
-  border-bottom: 2.5px solid var(--header);
-}
-#projects h3 {
-  font-size: 1.5rem;
-  padding-top: 2rem;
-  border-bottom: 2.5px solid var(--header);
-}
-.projectScreen {
-  max-width: 80%;
-  border-radius: 20px;
-}
-.projectText {
-  text-align: left;
-  font-size: 1rem;
-}
-.projectLink {
-  font-size: 1rem;
-  font-family: 'Roboto Slab', serif;
-  background-color: var(--accentBlue);
-  color: var(--secondary);
-}
-.secondary {
-  background-color: var(--secondary);
-}
+
 
 
 /* Contact */
-#contact {
-  margin-bottom: 5rem;
-}
-#contact h2 {
-  font-size: 2rem;
-}
-#contact p {
-  font-size: 1.2rem;
-}
-.btn-social {
-  font-size: 2rem;
-  margin: .5rem;
-}
 
- /* Small devices (landscape phones, 576px and up) */
+
+ /* || >= 576px */
 @media screen and (min-width: 576px) { 
 
-  /* Navigation */
-  .logo {
-    max-width: 6.7rem;
-  }
-
-
-  /* Heading */
-  .heroLeft h2 {
-    font-size: 2.5rem;
-  }
-  .heroLeft h1 {
-    font-size: 3.2rem;
-  }
-  .heroLeft h3 {
-  font-size: 2rem;
-  }
-  #avatarMe {
-    height: 17rem;
-  }
-
-
-  /* About */
-  .tech {
-    max-width: 50%;
-  }
-
-
-  /* Projects */
-  .projectScreen {
-    max-width: 70%;
-  }
-  .projectText {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1.2rem;
-  }
-
-
-  /* Contact */
-  .btn-social {
-    font-size: 1.7rem;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) { 
-
-  /* Navigation */
-  #menu {
-    background-color: transparent;
-  }
-  .nav-link {
-    font-size: 24px; 
-  }
-  .btn-success {
-    width: 100%;
-  }
-
-
-  /* Heading */
-  .hero {
-    height: 40vh;
-  }
-  .hero .row {
-    min-height: 80%;
-  }
-  .heroLeft {
-    justify-content: center;
-    align-items: center;
-  }
-  #avatarMe {
-    height: 15rem;
-  }
-
-
-  /* About */
-  .tech {
-    max-width: 70%;
-  }
-  .aboutMe {
-    margin-top: 0;
-  }
-  .aboutText p {
-    font-size: 1.2rem;
-  }
-
-
-  /* Projects */
-  .projects {
-    margin-top: 0;
-  }
-  .projectScreen {
-    max-width: 90%;    
-  }
-  .projectScreen:hover {
-    outline: 3px solid var(--accentGreen);
-  }
-  .projectText {
-    text-align: left;
-    font-size: 1.2rem;
-  }
-  .projectLink {
-    font-size: 1rem;
-  }
-  .screenXL {
-    max-width: 80%;
-  }
-  
-
-  /* Contact */
-  #contact h2 {
-    font-size: 2.5rem;
-  }
-  #contact p {
-    font-size: 1.5rem;
-  }
-
-}
-
- /* Large devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) { 
-  
-  /* Navigation */
-  .logo {
-    max-width: 10rem;
-  }
-  .nav-link:hover {
-    color: #fff;
-  }
-  .btn-success:hover {
-    background-color: var(--accentBlue);
-    color: #fff;
-  }
-
-
-  /* Heading */
-  .hero {
-    height: 60vh;
-  }
-  .heroLeft h1 {
-    font-size: 3.2rem;
-    margin: 1rem 0 2.5rem 0;
-  }
-  #avatarMe {
-    height: 20rem;
-  }
-
-
-  /* About */
-  .tech {
-    margin: 0;
-    padding: 0;
-  }
-  .techStack {
-    width: 4.8rem;
-    height: 4.5rem;
-  }
-  .aboutMe {
-    padding-right: 1rem;
-  }
-  .aboutText p {
-    font-size: 1rem;
-  }
-
-
-  /* Projects */
-  .projectText {
-    font-size: 1.2rem;
-    text-align: justify;
-  }
-  .projectScreen {
-    max-width: 80%;
-  }
-  .screenXL {
-    max-width: 70%;
-  }
-  .projectLink:hover {
-    background-color: var(--accentGreen);
-    color: var(--primary);
-  }
  
 }
 
- /* Extra large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) { 
-  /* Main Container */
-  .main {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+/* || >= 768px */
+@media screen and (min-width: 768px) { 
 
+ 
 
-  /* Navigation */
-  .nav-link {
-    font-size: 26px;
-  }
-
-
-  /* Heading */
-  .hero {
-    height: 60vh;
-  }
-  #avatarMe {
-    height: 22rem;
-  }
-
-
-  /* About */
-  .techStack {
-    width: 3.8rem;
-    height: 5.5rem;
-  }
-  .techName {
-    font-size: 1.5rem;
-  }
-  .aboutText p {
-    font-size: 1.1rem;
-  }
-
-
-  /* Projects */
-  #projects h2 {
-    font-size: 3rem;
-  }
-  #projects h3 {
-    font-size: 1.9rem;
-  }
-  .projectScreen {
-    max-width: 70%;
-    border-radius: 20px;
-  }
-  .screenXL {
-    max-width: 60%;
-  }
-  .projectText {
-    font-size: 1.3rem;
-  }
-  .projectLink {
-    font-size: 1.3rem;
-  }
-  .projectLink:hover {
-    background-color: var(--accentGreen);
-    color: var(--primary);
-  }
-
-
-  /* Contact */
-  #contact {
-    margin-bottom: 5rem;
-  }
-  #contact h2 {
-    font-size: 3rem;
-  }
-  #contact p {
-    font-size: 1.8rem;
-  }
-  .btn-social {
-    font-size: 2rem;
-  }
 }
 
-/* Very Large devices and 27' monitors */
+ /* || >= 992px */
+@media screen and (min-width: 992px) { 
+  
+ 
+}
+
+ /* || >= 1200px */
+@media screen and (min-width: 1200px) { 
+  
+
+}
+
+/* || >= 1440px */
 @media screen and (min-width: 1500px) {
 
-  /* About */
-  #about {
-    padding-bottom: 3rem;
+  #main-container {
+    position: fixed;
+    border: var(--yellowOrange) 2.5px solid;
+    margin: 75px;
+    min-height: 80vh;
+    min-width: 90vw;
   }
 
+  /* Navigation */
+  nav {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100%;
+    border-bottom: var(--yellowOrange) 2.5px solid;
+    height: 50px;
+  }
 
-  /* Projects */
-  .projects {
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+  nav .marquee {
+    display: inline-flex;
+    align-items: center;
+    font-size: 22px;
+    color: var(--yellowOrange);
   }
-  .projectScreen {
-    max-width: 60%;
-    border-radius: 20px;
+
+  nav ul {
+    display: inline-flex;
+    list-style: none;
+    margin-left: auto;
   }
-  .screenXL {
-    max-width: 50%;
+
+  nav ul li {
+    border-left: var(--yellowOrange) 2.5px solid;
+  }
+
+  .nav-link {
+    color: var(--yellowOrange);
+    font-size: 22px;
+  }
+
+  .nav-link:hover {
+    background-color: var(--darkOrchid);
+    color: white;
+  }
+
+  /* Main Page Content */
+
+  #main-page-grid {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 100%;
+  }
+
+  .left-sidebar {
+    background-color: var(--yellowOrange);
+  }
+
+  .main {
+    background-color: black;
+  }
+
+  .right-sidebar {
+    background-color: var(--purple);
   }
 
 }
