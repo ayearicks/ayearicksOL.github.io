@@ -79,7 +79,7 @@ p {
 } 
 
 .navbar-toggler {
-  color: var(--apricot);
+  color: var(--white);
 }
 .navbar-toggler:focus {
   box-shadow: 0 0 0 2px var(--apricot);
