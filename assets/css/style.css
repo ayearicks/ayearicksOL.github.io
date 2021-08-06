@@ -6,9 +6,9 @@
   /* Colors */
   --apricot: #FFB703;
   --sunburst: #FB8500;
-  --sky: #8ECAE6;
-  --blueGreen: #219EBC;
-  --coolGray: #023047;
+  --sky: #95d8f7;
+  --blueGreen: #15778E;
+  --coolGray: #022333;
   --white: #ffffff;
   --black: #000000;
   /* Fonts */
@@ -238,6 +238,7 @@ p {
 #about .btn {
   border-color: var(--apricot);
   color: var(--coolGray);
+  font-weight: 700;
 }
 
 
@@ -381,8 +382,8 @@ p {
 }
 
 .card .ref-links {
-  color: var(--sunburst);
-  text-decoration: dashed underline 2px #000000;
+  color: var(--coolGray);
+  text-decoration: dashed underline 2px var(--black);
 }
 
  /* Small devices (landscape phones, 576px and up) */
