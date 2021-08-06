@@ -93,44 +93,30 @@ p {
   .nav-link {
     width: 103.5%;
   }
-  
-  .navbar-brand:hover, .nav-link:hover {
-    color: var(--white);
-    text-decoration: underline 2.5px var(--apricot);
-  }
-  
-  .nav a.nav-link.active {
-    text-decoration: underline;
-    text-decoration-color: var(--apricot);
-  }
 
- }
+}
 
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-  .navbar-brand, .nav-link {
-    font-size: 24px;
-    color: var(--sky);
-  }
-  
-  .navbar-brand:hover, .nav-link:hover {
-    color: var(--white);
-    text-decoration: underline 2.5px var(--apricot);
-  }
-  
-  .nav a.nav-link.active {
-    text-decoration: underline;
-    text-decoration-color: var(--apricot);
+  .navbar-nav {
+    width: 90%;
   }
 
- }
+}
 
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 
+  .navbar-nav {
+    position: relative;
+    width: unset;
+    top: unset;
+    left: unset;
+    background-color: transparent;
+  } 
+
   .navbar-brand, .nav-link {
-    font-size: 24px;
     color: var(--sky);
   }
   
@@ -144,46 +130,7 @@ p {
     text-decoration-color: var(--apricot);
   }
 
- }
-
- /* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-
-  .navbar-brand, .nav-link {
-    font-size: 24px;
-    color: var(--sky);
-  }
-  
-  .navbar-brand:hover, .nav-link:hover {
-    color: var(--white);
-    text-decoration: underline 2.5px var(--apricot);
-  }
-  
-  .nav a.nav-link.active {
-    text-decoration: underline;
-    text-decoration-color: var(--apricot);
-  }
-
- }
-
- /* XX-Large devices (>1400px) */
-@media (min-width: 1400px) {
-    .navbar-brand, .nav-link {
-      font-size: 24px;
-      color: var(--sky);
-    }
-    
-    .navbar-brand:hover, .nav-link:hover {
-      color: var(--white);
-      text-decoration: underline 2.5px var(--apricot);
-    }
-    
-    .nav a.nav-link.active {
-      text-decoration: underline;
-      text-decoration-color: var(--apricot);
-    }
-  }
-  
+}
   
   
 /*-----------------------
