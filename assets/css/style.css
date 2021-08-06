@@ -15,8 +15,8 @@
   --raleway: 'Raleway', sans-serif;
   --spaceMono: 'Space Mono', monospace;
   /* Decorations */
-  --sunnyLine: underline 2px var(--sunburst);
-  --blueLine: underline 2px var(--blueGreen);
+  --sunnyLine: underline 2px #fb8500;
+  --blueLine: underline 2px #219ebc;
 }
 
 
@@ -382,7 +382,7 @@ p {
 
 .card .ref-links {
   color: var(--sunburst);
-  text-decoration: dashed underline 2px var(--black);
+  text-decoration: dashed underline 2px #000000;
 }
 
  /* Small devices (landscape phones, 576px and up) */
