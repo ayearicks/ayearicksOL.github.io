@@ -17,8 +17,8 @@ This is my personal portfolio website. Go ahead and poke around.
 
 ### Screenshots
 
-![Mobile]("")
-![Desktop]("")
+<img src="assets/img/screenCaps/portfolioMobile.webp" width="300">
+<img src="assets/img/screenCaps/portfolioDesktop.webp" width="600">
 
 
 
