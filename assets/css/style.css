@@ -1,464 +1,288 @@
-/* Theme Colors */
+/*-----------------------
+    >| Global Variables
+------------------------*/
+
 :root {
-  --primary: #1e2125;
-  --secondary: #000;
-  --accentGreen: #66c342;
-  --accentBlue: #65c9ff;
-  --accentGray: #787878;
-  --paragraph: #a3abb4;
-  --header: #fff;
+  /* Colors */
+  --apricot: #FFB703;
+  --sunburst: #FB8500;
+  --sky: #8ECAE6;
+  --blueGreen: #219EBC;
+  --coolGray: #023047;
+  --white: #ffffff;
+  --black: #000000;
+  /* Fonts */
+  --raleway: 'Raleway', sans-serif;
+  --spaceMono: 'Space Mono', monospace;
+  /* Decorations */
+  --sunnyLine: underline 2px var(--sunburst);
+  --blueLine: underline 2px var(--blueGreen);
 }
 
-/* General Styles */
-body {
+
+/*-----------------------
+  >| Base Styles
+------------------------*/
+
+html, body {
   height: 100%;
+  background-color: var(--coolGray);
+  margin-top: 1rem;
+  scroll-behavior: smooth;
 }
-h1, h2, h3, h4, h5 {
-  color: var(--header);
-  font-family: 'PT Serif', serif;
+
+nav,
+h1,
+h2,
+h3,
+h4,
+h5, 
+a {
+  font-family: var(--spaceMono);
+  color: var(--apricot);
 }
+
 p {
-  color: var(--paragraph);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--raleway);
 }
-.greenLinks {
-  color: var(--accentGreen);
-}
-.greenLinks:hover {
-  color: var(--accentBlue);
-  text-decoration: none;
-}
-.blueLinks {
-  color: var(--accentBlue);
-}
-.blueLinks:hover {
-  color: var(--accentGreen);
-  text-decoration: none;
+
+.wrapper {
+  padding: 1.5rem;
+  margin: 0;
 }
 
 
-/* Extra small devices (portrait phones, less than 576px) */
+/*-----------------------
+  >| Navigation
+------------------------*/
 
-/* Main Container */
-.main {
-  background: linear-gradient(to right, rgba(30, 33, 37, 1), rgba(30, 33, 37, .8)), url("../img/dots.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-
-/* Navigation */
-.logo {
-  max-width: 5rem;
-  padding-top: 1rem;
-  animation-delay: 1s;
-}
-.hamburger {
-  color: var(--paragraph);
-  font-size: 30px;
-}
-#menu {
-  text-align: center;
-  background-color: var(--secondary);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.nav-link {
-  font-family: 'Roboto Slab', serif;
-  color: var(--paragraph);
+.navbar-brand, .nav-link {
   font-size: 24px;
+  color: var(--sky);
 }
-.btn-success {
-  background-color: var(--accentGreen);
-  color: #fff;
-  width: 50%;
-  margin: 0 auto;
+
+.navbar-brand:hover, .nav-link:hover {
+  color: var(--white);
+  text-decoration: underline 2.5px var(--apricot);
+}
+
+.nav a.nav-link.active {
+  text-decoration: underline;
+  text-decoration-color: var(--apricot);
 }
 
 
-/* Heading */
-.hero {
-  height: 70vh;
+/*-----------------------
+  >| Heading
+------------------------*/
+
+.heading {
+  margin-top: 10rem;
+  min-height: 75vh;
 }
-.hero .row {
-  min-height: 100%;
+
+.btn {
+  color: var(--white);
+  font-size: 20px;
+  border: 2px solid var(--sky);
+  border-radius: 0;
+  padding: 8px 7px;
+  margin-top: .5rem;
 }
-.heroLeft {
+
+.btn:hover {
+  color: var(--sky);
+  border-color: var(--sunburst);
+}
+
+.arrow-down {
+  color: var(--white);
+  font-size: 50px;
+  margin-top: 6rem;
+}
+
+.arrow-down a:hover {
+  color: var(--sunburst);
+}
+
+
+/*-----------------------
+  >| About
+------------------------*/
+
+#about {
+  background-color: var(--blueGreen);
+  padding: 3rem 0;
+}
+
+#about h3 {
+  color: var(--coolGray);
+  font-weight: 700;
+  text-decoration: var(--sunnyLine);
+}
+
+#about p {
+  color: var(--white);
+}
+
+#about img{
+  border-radius: 20%;
+  box-shadow: 10px 5px 0 5px var(--sunburst);
+}
+
+#about img:hover {
+  box-shadow: 10px 5px 0 5px var(--coolGray);
+}
+
+#about .btn {
+  border-color: var(--sky);
+  color: var(--coolGray);
+}
+
+#about .btn:hover {
+  color: var(--white);
+  border-color: var(--sunburst);
+}
+
+
+/*-----------------------
+  >| Tech Stack
+------------------------*/
+
+#tech-stack {
+  padding: 5rem 0;
+}
+
+#tech-stack h3 {
+  color: var(--sunburst);
+  font-weight: 700;
+  text-decoration: var(--blueLine);
   text-align: center;
 }
-.heroLeft h2 {
-  font-size: 2rem;
+
+#tech-stack i {
+  color: var(--sky);
+  font-size: 50px;
 }
-.heroLeft h1 {
-  font-size: 2.8rem;
+
+#tech-stack i:hover {
+  color: var(--apricot);
+  transform: scale(1.2);
+  transition: ease-in;
 }
-.heroLeft h3 {
-  font-size: 1.5rem;
-}
-#name {
-  color: var(--accentGreen);
-}
-#avatarMe {
-  height: 15rem;
+
+#tech-stack p {
+  color: var(--sky);
+  font-family: var(--spaceMono);
 }
 
 
-/* About */
-#about {
-  background-color: var(--secondary);
-}
-.techStack {
-  width: 3.8rem;
-  height: 5.5rem;
-}
-.techName {
-  color: var(--paragraph);
-  font-size: 2rem;
-}
-.aboutMe {
-  margin-top: 5rem;
-}
-.aboutText p {
-  font-size: 1.2rem;
-}
+/*-----------------------
+  >| Projects
+------------------------*/
 
-
-/* Projects */
 #projects {
-  margin-top: 5rem;
+  background-color: var(--blueGreen);
+  padding: 5rem 0;
 }
-.projects {
-  margin-top: 2rem;
-}
-#projects h2 {
-  font-size: 2rem;
-  border-bottom: 2.5px solid var(--header);
-}
+
 #projects h3 {
-  font-size: 1.5rem;
-  padding-top: 2rem;
-  border-bottom: 2.5px solid var(--header);
-}
-.projectScreen {
-  max-width: 80%;
-  border-radius: 20px;
-}
-.projectText {
-  text-align: left;
-  font-size: 1rem;
-}
-.projectLink {
-  font-size: 1rem;
-  font-family: 'Roboto Slab', serif;
-  background-color: var(--accentBlue);
-  color: var(--secondary);
-}
-.secondary {
-  background-color: var(--secondary);
-}
-
-
-/* Contact */
-#contact {
+  text-align: center;
+  color: var(--coolGray);
+  font-weight: 700;
+  text-decoration: var(--sunnyLine);
   margin-bottom: 5rem;
 }
-#contact h2 {
-  font-size: 2rem;
-}
-#contact p {
-  font-size: 1.2rem;
-}
-.btn-social {
-  font-size: 2rem;
-  margin: .5rem;
+
+.card {
+  flex-direction: row;
+  background-color: var(--sky);
+  border: 2px solid var(--sunburst);
+  padding: 2rem;
+  margin: 2rem 0;
 }
 
- /* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) { 
-
-  /* Navigation */
-  .logo {
-    max-width: 6.7rem;
-  }
-
-
-  /* Heading */
-  .heroLeft h2 {
-    font-size: 2.5rem;
-  }
-  .heroLeft h1 {
-    font-size: 3.2rem;
-  }
-  .heroLeft h3 {
-  font-size: 2rem;
-  }
-  #avatarMe {
-    height: 17rem;
-  }
-
-
-  /* About */
-  .tech {
-    max-width: 50%;
-  }
-
-
-  /* Projects */
-  .projectScreen {
-    max-width: 70%;
-  }
-  .projectText {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 1.2rem;
-  }
-
-
-  /* Contact */
-  .btn-social {
-    font-size: 1.7rem;
-  }
+.card img {
+  max-width: 25%;
+  border-radius: 30px;
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) { 
-
-  /* Navigation */
-  #menu {
-    background-color: transparent;
-  }
-  .nav-link {
-    font-size: 24px; 
-  }
-  .btn-success {
-    width: 100%;
-  }
-
-
-  /* Heading */
-  .hero {
-    height: 40vh;
-  }
-  .hero .row {
-    min-height: 80%;
-  }
-  .heroLeft {
-    justify-content: center;
-    align-items: center;
-  }
-  #avatarMe {
-    height: 15rem;
-  }
-
-
-  /* About */
-  .tech {
-    max-width: 70%;
-  }
-  .aboutMe {
-    margin-top: 0;
-  }
-  .aboutText p {
-    font-size: 1.2rem;
-  }
-
-
-  /* Projects */
-  .projects {
-    margin-top: 0;
-  }
-  .projectScreen {
-    max-width: 90%;    
-  }
-  .projectScreen:hover {
-    outline: 3px solid var(--accentGreen);
-  }
-  .projectText {
-    text-align: left;
-    font-size: 1.2rem;
-  }
-  .projectLink {
-    font-size: 1rem;
-  }
-  .screenXL {
-    max-width: 80%;
-  }
-  
-
-  /* Contact */
-  #contact h2 {
-    font-size: 2.5rem;
-  }
-  #contact p {
-    font-size: 1.5rem;
-  }
-
+.card-body {
+  padding-left: 2rem;
 }
 
- /* Large devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) { 
-  
-  /* Navigation */
-  .logo {
-    max-width: 10rem;
-  }
-  .nav-link:hover {
-    color: #fff;
-  }
-  .btn-success:hover {
-    background-color: var(--accentBlue);
-    color: #fff;
-  }
-
-
-  /* Heading */
-  .hero {
-    height: 60vh;
-  }
-  .heroLeft h1 {
-    font-size: 3.2rem;
-    margin: 1rem 0 2.5rem 0;
-  }
-  #avatarMe {
-    height: 20rem;
-  }
-
-
-  /* About */
-  .tech {
-    margin: 0;
-    padding: 0;
-  }
-  .techStack {
-    width: 4.8rem;
-    height: 4.5rem;
-  }
-  .aboutMe {
-    padding-right: 1rem;
-  }
-  .aboutText p {
-    font-size: 1rem;
-  }
-
-
-  /* Projects */
-  .projectText {
-    font-size: 1.2rem;
-    text-align: justify;
-  }
-  .projectScreen {
-    max-width: 80%;
-  }
-  .screenXL {
-    max-width: 70%;
-  }
-  .projectLink:hover {
-    background-color: var(--accentGreen);
-    color: var(--primary);
-  }
- 
+.card-title {
+  color: var(--coolGray);
+  font-weight: 700;
+  text-transform: lowercase;
+  text-decoration: var(--sunnyLine);
 }
 
- /* Extra large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) { 
-  /* Main Container */
-  .main {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-
-  /* Navigation */
-  .nav-link {
-    font-size: 26px;
-  }
-
-
-  /* Heading */
-  .hero {
-    height: 60vh;
-  }
-  #avatarMe {
-    height: 22rem;
-  }
-
-
-  /* About */
-  .techStack {
-    width: 3.8rem;
-    height: 5.5rem;
-  }
-  .techName {
-    font-size: 1.5rem;
-  }
-  .aboutText p {
-    font-size: 1.1rem;
-  }
-
-
-  /* Projects */
-  #projects h2 {
-    font-size: 3rem;
-  }
-  #projects h3 {
-    font-size: 1.9rem;
-  }
-  .projectScreen {
-    max-width: 70%;
-    border-radius: 20px;
-  }
-  .screenXL {
-    max-width: 60%;
-  }
-  .projectText {
-    font-size: 1.3rem;
-  }
-  .projectLink {
-    font-size: 1.3rem;
-  }
-  .projectLink:hover {
-    background-color: var(--accentGreen);
-    color: var(--primary);
-  }
-
-
-  /* Contact */
-  #contact {
-    margin-bottom: 5rem;
-  }
-  #contact h2 {
-    font-size: 3rem;
-  }
-  #contact p {
-    font-size: 1.8rem;
-  }
-  .btn-social {
-    font-size: 2rem;
-  }
+.card-text {
+  max-width: 80%;
+  margin-top: 2rem;
 }
 
-/* Very Large devices and 27' monitors */
-@media screen and (min-width: 1500px) {
+.card .btn {
+  border: 2px solid var(--sunburst);
+  color: var(--coolGray);
+  font-family: var(--spaceMono);
+  margin: 2rem 2rem 0 0;
+}
 
-  /* About */
-  #about {
-    padding-bottom: 3rem;
-  }
+.card .btn:hover {
+  border-color: var(--black);
+  background-color: var(--white);
+  color: var(--coolGray);
+}
+
+.card .ref-links {
+  color: var(--sunburst);
+  text-decoration: dashed underline 2px var(--black);
+}
+
+.card .ref-links:hover {
+  color: var(--white);
+}
 
 
-  /* Projects */
-  .projects {
-    padding-bottom: 3rem;
-    padding-top: 3rem;
-  }
-  .projectScreen {
-    max-width: 60%;
-    border-radius: 20px;
-  }
-  .screenXL {
-    max-width: 50%;
-  }
+/*-----------------------
+  >| Contact
+------------------------*/
 
+#contact {
+  padding: 5rem 0;
+}
+
+#contact h3 {
+  text-align: center;
+  color: var(--sunburst);
+  font-weight: 700;
+  text-decoration: var(--blueLine);
+  margin-bottom: 5rem;
+}
+
+#contact .form-control {
+  background-color: var(--sky);
+  color: var(--coolGray);
+  font-family: var(--raleway);
+  border: 0;
+  border-radius: 0;
+}
+
+#contact .form-control::placeholder {
+  color: var(--coolGray);
+}
+
+#contact .form-control:focus {
+  box-shadow: 0 0 0 2px var(--apricot);
+  border: 1px solid var(--sunburst);
+}
+
+#contact textarea {
+  resize: none;
+}
+
+#contact button, #contact .btn {
+  padding: 5px 30px;
 }
