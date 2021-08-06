@@ -1,280 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Default Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto+Slab&family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/e822198573.js" crossorigin="anonymous"></script>
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+    <title>Ashley Yearicks - Front end Web Developer</title>
 
-  <title>Ashley Yearicks - Web Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap v5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/e822198573.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body id="home">
+<body id="page-top">
 
-  <!-- Main Container -->
-  <div class="container-fluid main">
-    
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md">
-      <a class="navbar-brand" href="#home">
-        <img src="assets/img/bubbleLogo.png" class="logo animate__animated animate__tada">
-      </a>
-
-      <!-- Hamburger for Mobile Nav -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle Navigation Menu">
-        <i class="fa fa-bars hamburger"></i>
-      </button>
-
-      <!-- Menu Links -->
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ml-md-auto">
-          <li class="nav-item px-4">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item px-4">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item px-4">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-success" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">ashley.yearicks</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-3">
+                        <a class="nav-link active" aria-current="page" href="#page-top">home</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#about">about</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#projects">projects</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#contact">contact.me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Heading -->
-    <div class="container-fluid hero">
-      <div class="row">
-        <div class="col-12 col-md-6 order-md-1 order-2 heroLeft d-md-flex flex-md-column animate__animated animate__fadeInLeft">
-          <h2>Hi!</h2>
-          <h1>I'm <span id="name">Ashley Yearicks</span></h1>
-          <h3>Web Developer</h3>
-        </div>
-        <div class="col-12 col-md-6 order-md-2 order-1 text-center my-md-auto heroRight animate__animated animate__fadeInRight">
-          <img src="assets/img/avatarMe.svg" id="avatarMe">
-        </div>
-      </div>
-    </div>
 
-    <!-- About -->
-    <div class="container-fluid" id="about">
-      <div class="row pt-5">
-        <div class="col-md-6 pl-lg-5">
-          <h3 class="text-center text-lg-left text-uppercase">Tech Stack</h3>
-          <div class="container tech">
-            <div class="row pt-4">
-              <div class="col-12 col-lg-6 d-flex flex-row">
-                <img src="assets/img/html.png" class="techStack">
-                <p class="techName my-auto pl-3">HTML</p>
-              </div>
-              <div class="col-12 col-lg-6 d-flex flex-row pl-lg-5">
-                <img src="assets/img/css.png" class="techStack ml-xl-3">
-                <p class="techName my-auto pl-3">CSS</p>
-              </div>
+    <!-- Hero Display -->
+    <section id="home" class="container">
+        <div class="heading">
+            <div class="container d-flex justify-content-around align-items-center">
+                <div class="wrapper">
+                    <h1 class="display-4">Hi, I'm Ashley.</h1>
+                    <h3>I'm a junior front end developer based near Philadelphia, PA. I enjoy converting PSD files into working websites, and learning 
+                        new ways to solve old problems. Let's connect and see what we can build together!</h3>
+                    <a href="#resume" class="btn mt-3" role="button">
+                        <i class="fas fa-download"></i>
+                        resume
+                    </a>
+                </div>
+                <div class="wrapper">
+                    <img src="assets/img/avatarMe.svg" alt="Cartoon rendering of Ashley Yearicks">
+                </div>
             </div>
-            <div class="row pt-xl-5">
-              <div class="col-12 col-xl-6 d-flex flex-row">
-                <img src="assets/img/javascript.png" class="techStack">
-                <p class="techName my-auto pl-3">JavaScript</p>
-              </div>
-              <div class="col-12 col-xl-6 d-flex flex-row pt-lg-2">
-                <img src="assets/img/jquery.png" class="techStack ml-xl-5">
-                <p class="techName my-auto pl-3">JQuery</p>
-              </div>
+            <div class="container arrow-down d-flex justify-content-center">
+                <a href="#about" role="button"><i class="fas fa-long-arrow-alt-down"></i></a>
             </div>
-          </div>
         </div>
-        <div class="col-md-6">
-          <h3 class="text-center text-lg-right text-uppercase aboutMe">About Me</h3>
-          <div class="container aboutText pb-2 pt-md-5 text-center text-md-right text-lg-justify">
-            <p>
-              I'm a developer that can bring your ideas to life. From static webpages for your growing business, to fully functional web-apps, I always try to bring a fresh perspective to everything I do.
-            </p>
-            <p>
-              From the first time that I touched a Commodore64 and spent hours copying Basic code from a book just to play Space Invaders, I developed a deep passion about coding and taking things apart to discover how they work. I'm very proficient in transforming design ideas into functional sites and applications, while continuing to learn more back-end skills. <a href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" target="_blank" class="greenLinks">Contact me</a> and let's work together!
-            </p>
-          </div>
+    </section>
+
+
+    <!-- About Me -->
+    <section id="about" class="container-fluid">
+        <div class="container">
+            <div class="row wrapper">
+                <div id="about-photo" class="col-4">
+                    <span>
+                        <img src="assets/img/ashleyhoodie.webp" alt="photo of Ashley Yearicks">
+                    </span>
+                </div>
+                <div id="about-text" class="col-8">
+                    <h3>about.me</h3>
+                    <p>
+                        Coming from a data entry background, I've been fiddling with HTML and CSS since back in the old days of 'Geocities.' 
+                        Though I've spent years building PCs from scratch, I wanted to take my love for all things technology a step further. For me, programming 
+                        is the natural next step.
+                    </p>
+                    <p>
+                        I have a firm knowledge in HTML, CSS and Javascript. Though algorithms are challenging, I love trying to solve any problem thrown my way. 
+                        I'm currently studying React.js and more advanced Data Structures, while also refreshing my knowledge of Node.js and Express. 
+                    </p>
+                    <p>
+                        I look forward to working with you on your next project!
+                    </p>
+                    <a href="#contact" class="btn" role="button">contact.me</a>
+                </div>
+               
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
+
+
+    <!-- Tech Stack -->
+    <section id="tech-stack">
+        <div class="container">
+            <h3>tech.stack</h3>
+            <div class="row text-center mt-5">
+                <div class="col">
+                        <i class="fab fa-html5"></i>
+                        <p>html</p>
+                </div>
+                <div class="col">
+                        <i class="fab fa-css3"></i>
+                        <p>css</p>
+                </div>
+                <div class="col">
+                        <i class="fab fa-js"></i>
+                        <p>javascript</p>
+                </div>
+                <div class="col">
+                        <i class="fab fa-bootstrap"></i>
+                        <p>bootstrap</p>
+                </div>
+                <div class="col">
+                        <i class="fab fa-github"></i>
+                        <p>github</p>
+                </div>
+            </div>
+            <div class="row text-center mt-5">
+                <div class="col">
+                        <i class="fab fa-font-awesome"></i>
+                        <p>font.awesome</p>
+                </div>
+                <div class="col">
+                        <i class="fab fa-firefox-browser"></i>
+                        <p>firefox</p>
+                </div>
+                <div class="col">
+                        <i class="fab fa-chrome"></i>
+                        <p>chrome</p>
+                </div>
+                <div class="col">
+                        <i class="fab fa-google"></i>
+                        <p>google</p>
+                </div>
+                <div class="col">
+                        <i class="fab fa-wordpress"></i>
+                        <p>wordpress</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Projects -->
-    <div class="container-fluid pt-md-4" id="projects">
-      <h2 class="text-uppercase">Projects</h2>
+    <section id="projects">
+        <div class="container">
+            <h3>projects</h3>
 
-      <!-- Crystal Gems Crime Fighting Agency -->
-      <div class="row projects pt-5 pb-md-5">
-        <div class="col-12 col-md-6 order-md-2 order-1 text-center text-lg-right my-md-auto">
-          <a href="https://ayearicks.github.io/CrystalGems/" target="_blank">
-            <img src="assets/img/screenCaps/crystalGems.png" class="projectScreen">
-          </a>
-        </div>
-        <div class="col-12 col-md-6 order-md-1 order-2 d-md-flex flex-md-column justify-content-md-between">
-          <h3 class="text-center text-md-left">Crystal Gems Crime Fighting Agency</h3>
-          <p class="projectText">
-            This is a mock sign-up website for the cartoon Steven Universe&copy;. Responsive for all viewport sizes.
-            <br class="d-none d-lg-block">
-            Coded with HTML and CSS.
-          </p>
-          <div class="text-center text-md-left">
-            <a href="https://ayearicks.github.io/CrystalGems/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
-            <a href="https://github.com/ayearicks/CrystalGems" target="_blank" class="btn projectLink">Source Code</a>
-          </div>
-        </div>
-      </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <img src="assets/img/screenCaps/crystalGems.png" class="card-img-top" alt="Screenshot of website for Crystal Gems Crime Fighting Agency">
+                        <div class="card-body">
+                            <h5 class="card-title">Crystal Gems Crime Fighting Agency</h5>
+                            <p class="card-text">
+                                This is a mock sign-up website for the cartoon Steven Universe&copy;. Responsive for all viewports, this project was an 
+                                exercise in image placement and handling.
+                                Coded with HTML and CSS.
+                            </p>
+                            <a href="https://ayearicks.github.io/CrystalGems/" class="btn" role="button">live.version</a>
+                            <a href="https://github.com/ayearicks/CrystalGems" class="btn" role="button">source.code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card flex-lg-row-reverse">
+                        <img src="assets/img/screenCaps/huddleLanding.png" class="card-img-top" alt="Screenshot of website for Huddle company">
+                        <div class="card-body">
+                            <h5 class="card-title">Huddle Landing Page</h5>
+                            <p class="card-text">
+                                Huddle Landing Page is a coding challenge by <a href="https://www.frontendmentor.io/" target="_blank" class="ref-links">Frontend Mentor</a>. 
+                                Created from supplied image and style requirement files, this project was made responsive to the device widths requested. Coded with HTML, CSS, and Bootstrap.
+                            </p>
+                            <a href="https://ayearicks.github.io/Huddle-Landing-Page/" class="btn" role="button">live.version</a>
+                            <a href="https://github.com/ayearicks/Huddle-Landing-Page" class="btn" role="button">source.code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <img src="assets/img/screenCaps/bookmarkLanding.png" class="card-img-top" alt="Screenshot of website for Bookmark company">
+                        <div class="card-body">
+                            <h5 class="card-title">Bookmark landing page</h5>
+                            <p class="card-text">
+                                'Bookmark' Landing page is another coding challenge by <a href="https://www.frontendmentor.io" target="_blank" class="ref-links">Frontend Mentor</a>. 
+                                This project proved to be a bit more of a challenge with the accordion text feature being requested. Coded with HTML, CSS, and Jquery; optimized for 375px and 1440px viewports.
+                            </p>
+                            <a href="https://ayearicks.github.io/Bookmark-Landing-Page/" class="btn" role="button">live.version</a>
+                            <a href="https://github.com/ayearicks/Bookmark-Landing-Page" class="btn" role="button">source.code</a>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card flex-lg-row-reverse">
+                        <img src="assets/img/screenCaps/farmtotable.png" class="card-img-top" alt="Screenshot of a website for ">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="https://ayearicks.github.io/Bookmark-Landing-Page/" class="btn" role="button">live.version</a>
+                            <a href="https://github.com/ayearicks/Bookmark-Landing-Page" class="btn" role="button">source.code</a>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Huddle Landing Page -->
-      <div class="row projects secondary mb-md-5 mt-md-5">
-        <div class="col-12 col-md-6 order-md-1 order-1 text-center text-lg-left my-md-auto pt-3 pl-md-5">
-          <a href="https://ayearicks.github.io/Huddle-Landing-Page/" target="_blank">
-            <img src="assets/img/screenCaps/huddleLanding.png" class="projectScreen">
-          </a>
-        </div>
-        <div class="col-12 col-md-6 order-md-2 order-2 d-md-flex flex-md-column justify-content-md-between pr-lg-5">
-          <h3 class="text-center text-md-right">Huddle Landing Page</h3>
-          <p class="projectText pb-3">
-            Huddle Landing Page is a coding challenge by <a href="https://www.frontendmentor.io/" target="_blank" class="greenLinks">Frontend Mentor</a>. Made from a supplied image file and made responsive to the device widths requested. Coded with HTML, CSS, and Bootstrap.
-          </p>
-          <div class="text-center text-md-right mb-3">
-            <a href="https://ayearicks.github.io/Huddle-Landing-Page/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
-            <a href="https://github.com/ayearicks/Huddle-Landing-Page" target="_blank" class="btn projectLink">Source Code</a>
-          </div>
-        </div>
-      </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <img src="assets/img/screenCaps/drumKit.png" class="card-img-top" alt="Screenshot of a drum kit web application">
+                        <div class="card-body">
+                            <h5 class="card-title">Drum kit</h5>
+                            <p class="card-text">
+                                This is a project from <a href="https://javascript30.com" target="_blank" class="ref-links">30 Days of Javascript</a> by Wes Bos. 
+                                Originally a code-along exercise, I updated it to work with mobile devices and touch, in addition to PC keyboards. 
+                                Coded with HTML, CSS, and Javascript. 
+                            </p>
+                            <a href="https://ayearicks.github.io/DrumKit/" class="btn" role="button">live.version</a>
+                            <a href="https://github.com/ayearicks/DrumKit" class="btn" role="button">source.code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card flex-lg-row-reverse">
+                        <img src="assets/img/screenCaps/rockAcademy.png" class="card-img-top" alt="Screenshot of a website for the Rock Academy Company">
+                        <div class="card-body">
+                            <h5 class="card-title">rock Academy</h5>
+                            <p class="card-text">
+                                Rock Academy is a music lesson website targeted towards budding musicians of all ages. 
+                                Responsive for all devices and coded with HTML, CSS and Jquery.
+                            </p>
+                            <a href="https://ayearicks.github.io/RockAcademy/" class="btn" role="button">live.version</a>
+                            <a href="https://github.com/ayearicks/RockAcademy" class="btn" role="button">source.code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>          
+    </section>
 
-      <!-- Bookmark Landing Page -->
-      <div class="row projects mt-md-5 mb-md-5">
-        <div class="col-12 col-md-6 order-md-2 order-1 text-center text-lg-right my-md-auto">
-          <a href="https://ayearicks.github.io/Bookmark-Landing-Page/" target="_blank">
-            <img src="assets/img/screenCaps/bookmarkLanding.png" class="projectScreen">
-          </a>
-        </div>
-        <div class="col-12 col-md-6 order-md-1 order-2 d-md-flex flex-md-column justify-content-md-between">
-          <h3 class="text-center text-md-left">Bookmark Landing Page</h3>
-          <p class="projectText">
-            'Bookmark' Landing page is another coding challenge by <a href="https://www.frontendmentor.io" target="_blank" class="greenLinks">Frontend Mentor</a>. Coded with HTML, CSS, and Jquery, and optimized for 375px and 1440px viewports.
-          </p>
-          <div class="text-center text-md-left">
-            <a href="https://ayearicks.github.io/Bookmark-Landing-Page/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
-            <a href="https://github.com/ayearicks/Bookmark-Landing-Page" target="_blank" class="btn projectLink">Source Code</a>
-          </div>
-        </div>
-      </div>
+    <!-- Contact Me -->
+    <section id="contact">
+        <h3>contact.me</h3>
 
-      <!-- Farm Restaurant -->
-      <div class="row projects secondary mt-md-5 mb-md-5">
-        <div class="col-12 col-md-6 order-md-1 order-1 text-center text-lg-left my-md-auto pt-3 pl-md-5">
-          <a href="https://ayearicks.github.io/FarmRestaurant/" target="_blank">
-            <img src="assets/img/screenCaps/farmToTable.png" class="projectScreen screenXL">
-          </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 mx-auto">
+                    <form action="https://formspree.io/f/mbjpdevb" method="POST">
+                        <div class="mb-3">    
+                            <label for="name" class="visually-hidden form-label">name:</label>
+                            <input type="text" name="name" id="name" for="name" class="form-control" placeholder="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="visually-hidden form-label">email:</label>
+                            <input type="email" name="email" id="email" for="email" class="form-control" placeholder="e.mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="visually-hidden form-label">message:</label>
+                            <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="message"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" name="submit" class="btn">Send</button>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+            <div class="row mt-5 text-center">
+                <div class="col-6 mx-auto mt-5">
+                    <a class="btn" href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" role="button">
+                        <i class="fas fa-fw fa-envelope"></i>
+                    </a>
+                    <a class="btn" href="https://twitter.com/Jessarin5" role="button">
+                        <i class="fab fa-fw fa-twitter"></i>
+                    </a>
+                    <a class="btn" href="https://github.com/ayearicks" role="button">
+                        <i class="fab fa-fw fa-github"></i>
+                    </a>
+                    <a class="btn" href="https://www.linkedin.com/in/ashley-yearicks" role="button">
+                        <i class="fab fa-fw fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-md-6 order-md-2 order-2 d-md-flex flex-md-column justify-content-md-between pr-lg-5">
-          <h3 class="text-center text-md-right">Farm To Table</h3>
-          <p class="projectText pb-3">
-            A fictitious website named 'Farm to Table' offers homegrown food for a 5 star dining experience. Responsive for all viewport sizes. Coded with HTML and CSS.
-          </p>
-          <div class="text-center text-md-right mb-3">
-            <a href="https://ayearicks.github.io/FarmRestaurant/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
-            <a href="https://github.com/ayearicks/FarmRestaurant" target="_blank" class="btn projectLink">Source Code</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Drum Kit -->
-      <div class="row projects mb-md-5 mt-md-5">
-        <div class="col-12 col-md-6 order-md-2 order-1 text-center text-lg-right my-md-auto">
-          <a href="https://ayearicks.github.io/DrumKit/" target="_blank">
-            <img src="assets/img/screenCaps/drumKit.png" class="projectScreen screenXL">
-          </a>
-        </div>
-        <div class="col-12 col-md-6 order-md-1 order-2 d-md-flex flex-md-column justify-content-md-between">
-          <h3 class="text-center text-md-left">Drum Kit</h3>
-          <p class="projectText">
-            This is a project from <a href="https://javascript30.com" target="_blank" class="greenLinks">30 Days of Javascript</a> by Wes Bos. Originally a code-along exercise, I updated it to work with mobile devices and touch, in addition to PC keyboards. Coded with HTML, CSS, and Javascript. 
-          </p>
-          <div class="text-center text-md-left">
-            <a href="https://ayearicks.github.io/DrumKit/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
-            <a href="https://github.com/ayearicks/DrumKit" target="_blank" class="btn projectLink">Source Code</a>
-          </div>
-        </div>
-      </div>
+    </section>
 
-      <!-- Rock Academy -->
-      <div class="row projects secondary mb-md-5 mt-md-5">
-        <div class="col-12 col-md-6 order-md-1 order-1 text-center text-lg-left my-md-auto pt-3 pl-md-5">
-          <a href="https://ayearicks.github.io/RockAcademy/" target="_blank">
-            <img src="assets/img/screenCaps/rockAcademy.png" class="projectScreen screenXL">
-          </a>
-        </div>
-        <div class="col-12 col-md-6 order-md-2 order-2 d-md-flex flex-md-column justify-content-md-between pr-lg-5">
-          <h3 class="text-center text-md-right">Rock Academy</h3>
-          <p class="projectText pb-3">
-            Rock Academy is a music lesson website targeted towards budding musicians of all ages. Responsive for all devices and coded with HTML, CSS and Jquery.
-          </p>
-          <div class="text-center text-md-right mb-3">
-            <a href="https://ayearicks.github.io/RockAcademy/" target="_blank" class="btn projectLink mr-md-4">Live Version</a>
-            <a href="https://github.com/ayearicks/RockAcademy" target="_blank" class="btn projectLink">Source Code</a>
-          </div>
-        </div>
-      </div>
+      <!-- Footer -->
+    <footer>
+        <section class="copyright text-center text-white pb-5">
+            <div class="container">
+                <small>Designed and Coded with ❤️ Ashley Yearicks</small>
+            </div>
+        </section>
+    </footer>
 
-    </div>
-
-    <!-- Contact -->
-    <div class="container-fluid pt-5" id="contact">
-      <h2 class="text-uppercase text-center">Contact Me</h2>
-      <div class="row">
-        <div class="col-12 text-center pt-5">
-          <p class="pt-2">I look forward to working with you!</p>
-          <p>
-            <a href="assets/resume/AshleyYearicks.pdf" class="blueLinks">Résumé (PDF)</a>
-          </p>
-        
-          <!-- Contact Footer Social Icons -->
-          <div class="col-12 pt-5 mx-auto">
-            <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" target="_blank">
-              <i class="fas fa-fw fa-envelope"></i>
-            </a>
-            <a class="btn btn-outline-secondary btn-social mx-1" href="https://twitter.com/Jessarin5" target="_blank">
-              <i class="fab fa-fw fa-twitter"></i>
-            </a>
-            <a class="btn btn-outline-secondary btn-social mx-1" href="https://github.com/ayearicks" target="_blank">
-              <i class="fab fa-fw fa-github"></i>
-            </a>
-            <a class="btn btn-outline-secondary btn-social mx-1" href="https://www.linkedin.com/in/ashley-yearicks" target="_blank">
-              <i class="fab fa-fw fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    
-  <!-- Copyright Section -->
-  <section class="copyright text-center text-white pb-5">
-    <div class="container">
-      <small>Copyright &copy; Ashley Yearicks 2019-2020</small>
-    </div>
-  </section>
-
-  </div>
-  <!-- End Main Container -->
-
-</body>
-
-  <!-- Scripts for Bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Required Scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

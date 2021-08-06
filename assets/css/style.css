@@ -1,148 +1,288 @@
-/* || - Jump to Section */
-
-
-
-/* || Global Declarations */
+/*-----------------------
+    >| Global Variables
+------------------------*/
 
 :root {
-  /* Theme Colors */
-  --pumpkin: #FF6D00;
-  --heatWave: #FF7900;
-  --darkOrange: #FF8500;
-  --yellowOrange: #FF9100;
-  --orangePeel: #FF9E00;
-  --russianViolet: #240046;
-  --persianIndigo: #3C096C;
-  --purple: #5A189A;
-  --frenchViolet: #7B2CBF;
-  --darkOrchid: #9D4EDD;  
-
-  /* Typography */
-  --sourceCode: 'Source Code Pro', monospace;
+  /* Colors */
+  --apricot: #FFB703;
+  --sunburst: #FB8500;
+  --sky: #8ECAE6;
+  --blueGreen: #219EBC;
+  --coolGray: #023047;
+  --white: #ffffff;
+  --black: #000000;
+  /* Fonts */
+  --raleway: 'Raleway', sans-serif;
+  --spaceMono: 'Space Mono', monospace;
+  /* Decorations */
+  --sunnyLine: underline 2px var(--sunburst);
+  --blueLine: underline 2px var(--blueGreen);
 }
 
 
-/* || General Styles */
+/*-----------------------
+  >| Base Styles
+------------------------*/
 
-body {
+html, body {
   height: 100%;
-  background-color: var(--russianViolet);
-  font-family: var(--sourceCode);
+  background-color: var(--coolGray);
+  margin-top: 1rem;
+  scroll-behavior: smooth;
 }
 
-/* || <576px */
-
-
-/* Navigation */
-
-
-
-
-/* Heading */
-
-
-
-/* About */
-
-
-
-/* Projects */
-
-
-
-/* Contact */
-
-
- /* || >= 576px */
-@media screen and (min-width: 576px) { 
-
- 
+nav,
+h1,
+h2,
+h3,
+h4,
+h5, 
+a {
+  font-family: var(--spaceMono);
+  color: var(--apricot);
 }
 
-/* || >= 768px */
-@media screen and (min-width: 768px) { 
-
- 
-
+p {
+  font-family: var(--raleway);
 }
 
- /* || >= 992px */
-@media screen and (min-width: 992px) { 
-  
- 
+.wrapper {
+  padding: 1.5rem;
+  margin: 0;
 }
 
- /* || >= 1200px */
-@media screen and (min-width: 1200px) { 
-  
 
+/*-----------------------
+  >| Navigation
+------------------------*/
+
+.navbar-brand, .nav-link {
+  font-size: 24px;
+  color: var(--sky);
 }
 
-/* || >= 1440px */
-@media screen and (min-width: 1500px) {
+.navbar-brand:hover, .nav-link:hover {
+  color: var(--white);
+  text-decoration: underline 2.5px var(--apricot);
+}
 
-  #main-container {
-    position: fixed;
-    border: var(--yellowOrange) 2.5px solid;
-    margin: 75px;
-    min-height: 80vh;
-    min-width: 90vw;
-  }
+.nav a.nav-link.active {
+  text-decoration: underline;
+  text-decoration-color: var(--apricot);
+}
 
-  /* Navigation */
-  nav {
-    display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 100%;
-    border-bottom: var(--yellowOrange) 2.5px solid;
-    height: 50px;
-  }
 
-  nav .marquee {
-    display: inline-flex;
-    align-items: center;
-    font-size: 22px;
-    color: var(--yellowOrange);
-  }
+/*-----------------------
+  >| Heading
+------------------------*/
 
-  nav ul {
-    display: inline-flex;
-    list-style: none;
-    margin-left: auto;
-  }
+.heading {
+  margin-top: 10rem;
+  min-height: 75vh;
+}
 
-  nav ul li {
-    border-left: var(--yellowOrange) 2.5px solid;
-  }
+.btn {
+  color: var(--white);
+  font-size: 20px;
+  border: 2px solid var(--sky);
+  border-radius: 0;
+  padding: 8px 7px;
+  margin-top: .5rem;
+}
 
-  .nav-link {
-    color: var(--yellowOrange);
-    font-size: 22px;
-  }
+.btn:hover {
+  color: var(--sky);
+  border-color: var(--sunburst);
+}
 
-  .nav-link:hover {
-    background-color: var(--darkOrchid);
-    color: white;
-  }
+.arrow-down {
+  color: var(--white);
+  font-size: 50px;
+  margin-top: 6rem;
+}
 
-  /* Main Page Content */
+.arrow-down a:hover {
+  color: var(--sunburst);
+}
 
-  #main-page-grid {
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 100%;
-  }
 
-  .left-sidebar {
-    background-color: var(--yellowOrange);
-  }
+/*-----------------------
+  >| About
+------------------------*/
 
-  .main {
-    background-color: black;
-  }
+#about {
+  background-color: var(--blueGreen);
+  padding: 3rem 0;
+}
 
-  .right-sidebar {
-    background-color: var(--purple);
-  }
+#about h3 {
+  color: var(--coolGray);
+  font-weight: 700;
+  text-decoration: var(--sunnyLine);
+}
 
+#about p {
+  color: var(--white);
+}
+
+#about img{
+  border-radius: 20%;
+  box-shadow: 10px 5px 0 5px var(--sunburst);
+}
+
+#about img:hover {
+  box-shadow: 10px 5px 0 5px var(--coolGray);
+}
+
+#about .btn {
+  border-color: var(--sky);
+  color: var(--coolGray);
+}
+
+#about .btn:hover {
+  color: var(--white);
+  border-color: var(--sunburst);
+}
+
+
+/*-----------------------
+  >| Tech Stack
+------------------------*/
+
+#tech-stack {
+  padding: 5rem 0;
+}
+
+#tech-stack h3 {
+  color: var(--sunburst);
+  font-weight: 700;
+  text-decoration: var(--blueLine);
+  text-align: center;
+}
+
+#tech-stack i {
+  color: var(--sky);
+  font-size: 50px;
+}
+
+#tech-stack i:hover {
+  color: var(--apricot);
+  transform: scale(1.2);
+  transition: ease-in;
+}
+
+#tech-stack p {
+  color: var(--sky);
+  font-family: var(--spaceMono);
+}
+
+
+/*-----------------------
+  >| Projects
+------------------------*/
+
+#projects {
+  background-color: var(--blueGreen);
+  padding: 5rem 0;
+}
+
+#projects h3 {
+  text-align: center;
+  color: var(--coolGray);
+  font-weight: 700;
+  text-decoration: var(--sunnyLine);
+  margin-bottom: 5rem;
+}
+
+.card {
+  flex-direction: row;
+  background-color: var(--sky);
+  border: 2px solid var(--sunburst);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.card img {
+  max-width: 25%;
+  border-radius: 30px;
+}
+
+.card-body {
+  padding-left: 2rem;
+}
+
+.card-title {
+  color: var(--coolGray);
+  font-weight: 700;
+  text-transform: lowercase;
+  text-decoration: var(--sunnyLine);
+}
+
+.card-text {
+  max-width: 80%;
+  margin-top: 2rem;
+}
+
+.card .btn {
+  border: 2px solid var(--sunburst);
+  color: var(--coolGray);
+  font-family: var(--spaceMono);
+  margin: 2rem 2rem 0 0;
+}
+
+.card .btn:hover {
+  border-color: var(--black);
+  background-color: var(--white);
+  color: var(--coolGray);
+}
+
+.card .ref-links {
+  color: var(--sunburst);
+  text-decoration: dashed underline 2px var(--black);
+}
+
+.card .ref-links:hover {
+  color: var(--white);
+}
+
+
+/*-----------------------
+  >| Contact
+------------------------*/
+
+#contact {
+  padding: 5rem 0;
+}
+
+#contact h3 {
+  text-align: center;
+  color: var(--sunburst);
+  font-weight: 700;
+  text-decoration: var(--blueLine);
+  margin-bottom: 5rem;
+}
+
+#contact .form-control {
+  background-color: var(--sky);
+  color: var(--coolGray);
+  font-family: var(--raleway);
+  border: 0;
+  border-radius: 0;
+}
+
+#contact .form-control::placeholder {
+  color: var(--coolGray);
+}
+
+#contact .form-control:focus {
+  box-shadow: 0 0 0 2px var(--apricot);
+  border: 1px solid var(--sunburst);
+}
+
+#contact textarea {
+  resize: none;
+}
+
+#contact button, #contact .btn {
+  padding: 5px 30px;
 }
