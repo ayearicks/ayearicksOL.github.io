@@ -245,15 +245,6 @@ p {
 }
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-  
-  #about img{
-    margin-left: 20%;
-  }
-
- }
-
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
 
