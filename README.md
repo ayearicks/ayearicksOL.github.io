@@ -2,6 +2,8 @@
 
 This is my personal portfolio website. Go ahead and poke around.
 
+Currently looking for a remote position!
+
 ## Table of contents
 
 - [Ashley Yearicks - Junior Front End Web Developer](#ashley-yearicks---junior-front-end-web-developer)
