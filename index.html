@@ -22,6 +22,444 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.otherlevels.com/js-sdk/otherlevels.css?appKey=<website-project-key>">
 
+        <script>
+            $(document).ready(function () {
+                $('#tallModal').hide();
+                $('.report').click(function(e){
+                    e.preventDefault();
+                    var data_src = $(this).attr('data_src');                        
+                    })
+                });
+            </script>
+        <script>
+            var y = document.createElement("LINK");
+            y.setAttribute("type", "text/javascript");
+            y.setAttribute("href", "/ol-service-worker.js");
+            document.head.appendChild(y);
+        </script>
+        <script type="text/javascript">	
+            //Variable used to set the last Page User visited
+            var lastPageVisited;		
+            
+            //Checks if the page loaded and is ready
+            if (/comp|inter|loaded/.test(document.readyState)) {
+                initializeOLSDK("52743aad3f76c8e777e5c44bba0870ec");
+            } else {
+                document.addEventListener("DOMContentLoaded", initializeOLSDK("52743aad3f76c8e777e5c44bba0870ec"), false);
+            }
+            
+            /*
+            Imports the OtherLevels SDK from the OtherLevels CDN. Uses global variable Appkey to pull correct SDK version for client.
+            
+            The OtherLevels SDK is initialized with the create method. The create method start an OtherLevels Session or use a previous session that was stored by the browser if the user visited the same page from the same browser in less than 15 minutes.
+            */
+            function initializeOLSDK(appKey)
+            {
+                !(function (o, t, h, e, r, l, v) {
+                !o[e] &&
+                    ((o.OtherLevelsObject = e),
+                        (l = o[e] = function () {
+                            l.q ? l.q.push(arguments) : l.apply(l, arguments);
+                        }),
+                        (l.q = []),
+                        (v = t.createElement(h)),
+                        (v.async = !0),
+                        (v.src = r),
+                        (t = t.getElementsByTagName(h)[0]),
+                        t.parentNode.insertBefore(v, t));
+                })(
+                    window,
+                    document,
+                    "script",
+                    "_ol",
+                    "https://cdn.otherlevels.com/js-sdk/otherlevels.js?appKey=" + appKey
+                );
+                var options = {
+                    appName: "CAT",
+                    logLevel: 1,
+                    onError: function(err) {
+                        console.error('Something bad happened', err.message);
+                    }
+                };
+                _ol("create", appKey, options, function () {
+                    getRIMInterstitialInbox();
+                    getURLPathName();
+                    _ol('getTrackingId', function(value) {
+                        ol_tid = value;
+                        console.log('Tracking ID is', ol_tid);
+                        showOLSoftOptIn();
+                        showOLInterstitial("Placement 2");
+                    });
+                        
+                });
+            }
+            
+            /*
+                This function registers an event for a session. If the App had a phash in the URL before the session was created, this phash is sent along with the Register Event request.
+                
+                Parameters:
+                    eventName - The type of event (should be an explanative top level i.e. overview, purchase, registered, abandonedCart). (required)
+                    eventContent - The event label (typically contains a string representation of JSON object with meta data of the event, i.e. {“Home”: “Phillies”, “Away”: “Dodger”, "Price":"25", "Date":"2020-04-20"}. (required)
+                        If eventContent is a JSON object, it should be converted to a string before calling this method. This can be done with JSON.stringify.
+            */
+            function registerOLEvent(eventName, eventContent)
+            {
+                _ol('registerEvent', eventName, eventContent);
+            }		
+            
+            /*
+                This function is used to associate an OtherLevels Tracking ID with the App. It overwrites the current OtherLevels Tracking ID if the provided ID is different.
+                Parameters: 
+                    olTrackingId - The unique identifier associated with the user across the ecosystem.
+            */
+            function setOLTrackingID(olTrackingId) {
+                if (olTrackingId != "") {
+                    _ol("setTrackingId", olTrackingId);
+                }
+            }
+            
+            function getOLTrackingID() {
+                _ol('getTrackingId', function(value) {
+                    if(value.toLowerCase().indexOf("otherlevels.com") === -1)
+                    {
+                        showOLInterstitial("Placement 1");
+                    }
+                });
+            }
+            /*
+                This function sets the tag value for a tag name.
+                Parameters:
+        
+                    tagName - The name of the tag. (required)
+                    tagValue - The value of the tag. (required)
+                    tagType - The type of the tag. One of the following: (required), **Default set to String**
+                        string
+                        numeric
+                        timestamp
+            */
+            function setOLTag(tagName, tagValue, tagType = 'string'){
+                _ol('setTag', tagName, tagValue, tagType);
+            }
+            
+            /*
+                This method returns a tag value by tag name. Returns the value of the tag.
+        
+                Parameters:
+                    tagName - The name of the tag. (required)
+            */
+            function getOLTag(tagName)
+            {
+                _ol('getTag', tagName, function(tag){
+                    return tag.value;
+                });
+                
+            }
+            
+            /*
+                This function is used to prompt the user for web permission using a soft opt-in interstitials. If the user allows the soft opt-in interstitial, a hard prompt is presented to the user.
+            */
+            function showOLSoftOptIn()
+            {
+                _ol('push.isSupported', function(isSupported) {
+                    if(isSupported){
+                        _ol('push.isSubscribed', function(isSubscribed) {
+                            if (!isSubscribed) {
+                                _ol('askForPermission', 'notification', function(result) {
+                                    if(result == "subscribed" || result == "notsubscribed")
+                                    {
+                                        setOLTag("softOptInPage", lastPageVisited);
+                                    }
+                                }, getOLTrackingID());
+                            }
+                        });
+                    }
+                });
+            }
+            
+            /*
+                showOLInterstitial function is used to retrieve an interstitial message for a given placement and display it if the interstitial is found. The interstitial is displayed for all currently configured Tracking IDs. It is displayed as a modal alert box with the default style. Which placements are displayed on a certain page should be discussed with the client and OtherLevels.
+                Parameters:
+                    placement - Interstitial placement name. Placements are case sensitive. (required)
+                        Possible placement names:  
+                            App Open - Display when the user opens the app or website.
+                            Push Open - Display when the user opens the a Push.
+                            Feedback - Display when the user selects the feedback link.
+                            Store Launch - Display when a user opens your in-app store.
+                            Placement 1-9 & Placement A-F - Provided so that you can define your own triggers.
+            */
+            function showOLInterstitial(placement)
+            {
+                var retries = 0;
+                var PNelementId = 'cta';
+                var PNonElementClicked = function(event, context) {
+                    console.log('Clicked on "' + PNelementId + '". Closing interstitial and pushing phash.');
+                    context.close();
+                    context.pushPhash();
+                };
+                var PNhandlers = {};
+                if (PNelementId) {
+                  PNhandlers['click ' + PNelementId] = PNonElementClicked;
+                }
+                var correlationInterval = setInterval(function() {
+                    _ol("getTag", "lastPageVisited", function(response) {
+                        if (response.value === lastPageVisited) {
+                            clearInterval(correlationInterval);
+                            var askForPermissionDelay = 4000;
+                            setTimeout(function() {
+                                _ol('displayInterstitial', placement, PNhandlers,
+                                    function() {
+                                        _ol('registerEvent', placement + 'Interstitial', 'User Dismissed Interstitial', function() {
+                                          console.log('Event PLacement1Interstitial registered');
+                                        });
+                                    }, 
+                                    function() {
+                                        console.log('Interstitial loaded');
+                                    }, 
+                                    function() {
+                                        console.log('No interstitial found for this placement');
+                                })
+                            }, askForPermissionDelay);
+                        } else {
+                            retries += 1;
+                            if (retries > 20) {
+                                clearInterval(correlationInterval);
+                            }
+                        }
+                    });
+                }, 2000);
+            }
+            
+            /*
+                This function parses the page URL and sets the pathname as tags. These tags are used to verify which interstitial is to be shown to the user.
+            */
+            function getURLPathName()
+            {
+                var olMaxDepth = 2;
+                var olPageUrlArray = location.pathname
+                    .substring(location.pathname.indexOf("/") + 1)
+                    .split("/")
+                    .filter(function(segment, index) {
+                        return segment && segment.length;
+                    });
+                var olLastPageCategoryTags = olPageUrlArray
+                .slice(0, olMaxDepth)
+                .map(function(url, index) {
+                    return {
+                        name: "lastPageCategory" + (index + 1),
+                        value: olPageUrlArray[index].toLowerCase() || "",
+                        type: "string"
+                    };
+                });
+        
+                // set empty path segments
+                while (olLastPageCategoryTags.length < olMaxDepth) {
+                    olLastPageCategoryTags.push({
+                        name: "lastPageCategory" + (olLastPageCategoryTags.length + 1),
+                        value: "",
+                        type: "string"
+                    });
+                }
+        
+                // Set home segment
+                if (
+                    olLastPageCategoryTags &&
+                    olLastPageCategoryTags.length &&
+                    olLastPageCategoryTags[0] &&
+                    olLastPageCategoryTags[0]["value"] === ""
+                ) {
+                    olLastPageCategoryTags[0]["value"] = "home";
+                }
+                
+                if (olPageUrlArray.length > 0) {
+                    lastPageVisited = olLastPageCategoryTags[0]["value"];
+                } else {
+                    //if it's empty then we're on the home page
+                    lastPageVisited = "home";
+                }
+                setOLTag("lastPageVisited", lastPageVisited);			
+            }
+            
+            /*RIM Functions*/
+            //Opens and Closes the Rich Inbox Container
+            function ol_inboxToggle(){
+                $(".ol_rim_inbox_hidden").toggleClass("ol_rim_inbox_open");
+            }
+            
+            //Deletes the Rich Inbox and closes the Full Message Display
+            function markMessageDeleted(message) {
+                _ol('rims.markAsDeleted', message);
+                $('.ol_rim_display_full').css("display", "none");
+            }
+            
+            //Open the Full Display Message and assigns the HTML to the appropriate sections. This is used for messages that Open addition content
+            function showMessageContent(e) {
+                //prevents the page from reloading
+                e.preventDefault();		
+                var content = $('#ol_rim_display_full_content');
+                var message = $(this).data();
+                $('.ol_rim_display_full').css("display", "flex");
+                content.find('#ol_rim_display_full_title').html(message.sline);
+                content.find('#ol_rim_display_full_body').html(message.content);
+                content.find('#ol_rim_display_full_button').text(message.blbl).attr('onclick', "window.location.href='" + message.burl + "'");
+                $('#ol_rim_display_full_content').css("display", "inline-block");
+                ol_markMessageAsRead(message.id);
+            }
+            
+            //Marks message read/reread only button is clicked
+            function ol_markMessageAsRead(message)
+            {
+                _ol('rims.markAsRead', message, function(m) {					
+                    el = document.getElementById(m.id);
+                    if(el){
+                        el.remove("ol_newmessage");
+                    }
+                });
+            }
+            
+            function newRimsMessage(m) 
+            {
+                var el = $('<div class="ol_message"></div>');
+                var ol_message_id = m.id;
+                el.addClass('message-' + ol_message_id);
+                var new_message = '<div class="ol_rim_inbox_text_container">';
+                if (m.read) {
+                    el.addClass('read');
+                }
+                else
+                {
+                    new_message = '<div class="ol_rim_inbox_text_container"><div class="ol_rim_message_new_icon" id="' + ol_message_id + '">NEW</div>';
+                }
+                
+                var card_url = m.card_url;
+                if(card_url.includes("http"))
+                {
+                    card_url = '<img class="ol_rim_inbox_img" src="' + card_url + '">';
+                }
+                
+                var content = m.content;
+                var button_href = "/"
+                var mark_read_message = "";
+                var button_id = 'button_' + ol_message_id;
+                var button_label = m.blbl;
+                //currently no way to tell if a message should display more content...this is the hard coded way
+                if(button_label == "Learn More")
+                {
+                    //there is currently no way to add preview text via the dashboard. This finds the needed preview text and sets it.
+                    var subStr = content.split('<div id="rim_inbox_text" style="display:none;">');
+                    var subSubStr = subStr[1].split('</div>');
+                    content = subSubStr[0];
+                }
+                else
+                {
+                    button_href = m.burl;
+                    mark_read_message = 'onClick="ol_markMessageAsRead(' + ol_message_id + ')" href="' + button_href + '"';
+                }
+                
+                el.append(card_url + new_message + '<span class="ol_rim_subject">' + m.sline + '</span><br/><div class="ol_rim_content">' + content +'</div></div><div class="ol_rim_inbox_delete" onclick="markMessageDeleted(' + ol_message_id +')">x</div><a class="btn-primary ol_rim_cta_button" id="' + button_id +'" ' + mark_read_message + '>' + button_label + '</a>');
+                return el;
+            }
+            
+            //Displays No Promo Message inside Rich Inbox
+            function noNewRimsMessage()
+            {
+                var el = $('<div id="ol_norimtext">NO PROMOS</div>');
+                return el;
+            }
+            
+            // register rich inbox global messages handler
+            function getRimMessages()
+            {
+                _ol('rims.onMessagesUpdated',
+                    function(messages, newMessages, updated, deleted, meta) 
+                    {
+                        $(".ol_newmessage").text(messages.length);
+                        ol_rim_message_count = messages.length;	
+                        if (ol_rim_message_count == 0) 
+                        {
+                            $('.ol_messages').prepend(noNewRimsMessage());
+                            $(".rotate").removeClass("rotate");
+                            ol_rim_message_count = 0;
+                        }
+        
+                        // add new messages
+                        if (messages.length > 0 && newMessages.length > 0 && newMessages[0].id !== messages[0].id) 
+                        {
+                            // add old messages to the bottom of the list
+                            newMessages.forEach(function(m) 
+                            {
+                                $('.ol_messages').append(newRimsMessage(m));
+                                setMessageDataOnClick(m)
+                            });
+                        } 
+                        else 
+                        {
+                            // add new messages to the top of the list
+                            newMessages.slice().reverse().forEach(function(m) 
+                            {
+                                $('.ol_messages').prepend(newRimsMessage(m));
+                                setMessageDataOnClick(m)
+                            });
+                        }
+        
+                        // update existing
+                        updated.forEach(function(m) {
+                            var el = $('.ol_messages .message-' + m.id);
+                            if (m.read) {
+                                el.addClass('read');
+                            } else {
+                                el.removeClass('read');
+                            }
+                        });
+                        
+                        // remove deleted
+                        deleted.forEach(function(m) {
+                            $('.ol_messages .message-' + m.id).remove();
+                        });
+        
+                });
+        
+                _ol('rims.getNewMessages', {}, function(messages) 
+                {
+                    messages.sort(function(a, b) 
+                    {
+                        return a.read - b.read;
+                    });
+                });
+            }
+            var ol_rim_message_count = 0;
+            
+            //this sets the data and the click function for messages that contain more content
+            function setMessageDataOnClick(message)
+            {
+                //currently no way to tell if a message should display more content...this is the hard coded way
+                if(message.blbl == "Learn More")
+                {
+                    var button_id = message.id;
+                    var button = $("#button_" + button_id);
+                    button.data(message);
+                    button.click(showMessageContent);
+                }
+            }
+            function getRIMInterstitialInbox()
+            {
+                _ol('displayInterstitial', "Placement F", "",
+                function() {
+                    _ol('registerEvent', placement + 'Interstitial', 'User Dismissed Interstitial', function() {
+                      console.log('Event PLacement1Interstitial registered');
+                    });
+                }, 
+                function() {
+                    //For interstitials, this is any action needed after it is loaded
+                    //this kicks off the get RIM functions
+                    var richinboxmessages = getRimMessages();
+                },
+                function() {
+                    console.log('No interstitial found for this placement');
+                })
+            }
+            
+            </script>
+
 </head>
 <body id="page-top">
 
@@ -361,12 +799,11 @@
     <!-- Menu JS -->
     <script src="assets/js/menu.js"></script>
     <script>
-
         (function(o,t,h,e,r,l,v)
             {!o[e]&&(o.OtherLevelsObject=e,l=o[e]=function(){l.q?l.q.push(arguments):l.apply(l,arguments)},l.q=[],v=t.createElement(h),v.async=!0,v.src=r,t=t.getElementsByTagName(h)[0],t.parentNode.insertBefore(v,t))}
             (window,document,"script","_ol","https://cdn.otherlevels.com/js-sdk/otherlevels.js?appKey=52743aad3f76c8e777e5c44bba0870ec")
         );
-    
-        </script>
+    </script>
+    <script src="ol-service-worker.js"></script>
 </body>
 </html>
