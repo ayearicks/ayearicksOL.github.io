@@ -51,6 +51,26 @@ p {
   margin: 0;
 }
 
+.container {
+
+}
+
+.container-fluid {
+
+}
+
+.row {
+
+}
+
+.column {
+
+}
+
+.hidden {
+  display: none;
+}
+
 
 /*-----------------------
   >| Navigation
@@ -81,8 +101,13 @@ p {
 .navbar-toggler {
   color: var(--white);
 }
+
 .navbar-toggler:focus {
   box-shadow: 0 0 0 2px var(--apricot);
+}
+
+.nav-item {
+  margin-right: 3rem;
 }
 
 
@@ -99,7 +124,7 @@ p {
 
 }
 
- /* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
   .navbar-nav {
@@ -108,7 +133,7 @@ p {
 
 }
 
- /* Large devices (desktops, 992px and up) */
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 
   .navbar-nav {
@@ -142,7 +167,7 @@ p {
 
 /* X-Small devices (<576px) */
 
-.heading .wrapper, .heading h1{
+.heading-container, .heading h1{
   padding: 1.5rem 0;
 }
 
@@ -211,7 +236,7 @@ p {
   }
   
   
-  /*-----------------------
+/*-----------------------
   >| About
 ------------------------*/
 
@@ -281,7 +306,7 @@ p {
 }
   
   
-  /*-----------------------
+/*-----------------------
   >| Tech Stack
 ------------------------*/
 
@@ -307,7 +332,11 @@ p {
   font-family: var(--spaceMono);
 }
 
- /* Medium devices (tablets, 768px and up) */
+.tech-stack-icons {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   
   #tech-stack i:hover {
@@ -318,7 +347,7 @@ p {
 
 }
 
- /* Large devices (desktops, 992px and up) */
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
   
   #tech-stack .col-lg-2 {
@@ -380,7 +409,7 @@ p {
   text-decoration: dashed underline 2px var(--black);
 }
 
- /* Small devices (landscape phones, 576px and up) */
+/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
   
   .card img {
@@ -403,7 +432,7 @@ p {
   
  }
 
- /* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   
   .card img {
@@ -422,7 +451,7 @@ p {
 
 }
 
- /* Large devices (desktops, 992px and up) */
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
   
   .card {
@@ -456,12 +485,16 @@ p {
   margin-bottom: 3rem;
 }
 
-#contact .form-control {
+.form-control {
   background-color: var(--sky);
   color: var(--coolGray);
   font-family: var(--raleway);
   border: 0;
   border-radius: 0;
+}
+
+.contact-field {
+
 }
 
 #contact .form-control::placeholder {
@@ -479,4 +512,17 @@ p {
 
 #contact button, #contact .btn {
   padding: 5px 30px;
+}
+
+.contact-column {
+
+}
+
+
+/*-----------------------
+  >| Footer
+------------------------*/
+
+.copyright {
+  
 }

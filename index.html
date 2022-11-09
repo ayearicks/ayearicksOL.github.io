@@ -13,40 +13,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap v5 -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/e822198573.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-
-    <link rel="stylesheet" href="https://cdn.otherlevels.com/js-sdk/otherlevels.css?appKey=52743aad3f76c8e777e5c44bba0870ec">
-    <link rel="text/javascript" href="/ol-service-worker.js">
-    <script type="text/javascript" src="app.js"></script>
 </head>
 <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-transparent">
+    <nav class="navbar">
         <div class="container">
             <a class="navbar-brand" href="#page-top">ashley.yearicks</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
-                    <li class="nav-item me-3">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#page-top">home</a>
                     </li>
-                    <li class="nav-item me-3">
+                    <li class="nav-item">
                         <a class="nav-link" href="#about">about</a>
                     </li>
-                    <li class="nav-item me-3">
+                    <li class="nav-item">
                         <a class="nav-link" href="#projects">projects</a>
                     </li>
-                    <li class="nav-item me-3">
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">contact.me</a>
                     </li>
                 </ul>
@@ -58,21 +50,21 @@
     <!-- Hero Display -->
     <section id="home" class="container">
         <div class="heading">
-            <div class="container d-flex flex-column flex-md-row justify-content-around align-items-center text-center text-md-start">
-                <div class="wrapper order-2 order-md-1">
-                    <h1 class="display-4">Hi, I'm Ashley.</h1>
-                    <h3>I'm a junior front end developer based near Philadelphia, PA. I enjoy converting PSD files into working websites, and learning 
+            <div class="container">
+                <div class="wrapper heading-container">
+                    <h1>Hi, I'm Ashley.</h1>
+                    <h3>I'm a front end developer based near Philadelphia, PA. I enjoy converting PSD files into working websites, and learning 
                         new ways to solve old problems. Let's connect and see what we can build together!</h3>
                     <a href="assets/resume/AshleyYearicks.pdf" class="btn mt-3" role="button">
                         <i class="fas fa-download"></i>
                         resume
                     </a>
                 </div>
-                <div class="wrapper order-1 order-md-2">
+                <div class="wrapper">
                     <img src="assets/img/avatarMe.svg" alt="Cartoon rendering of Ashley Yearicks">
                 </div>
             </div>
-            <div class="container arrow-down d-flex justify-content-center">
+            <div class="container arrow-down">
                 <a href="#about" role="button"><i class="fas fa-long-arrow-alt-down"></i></a>
             </div>
         </div>
@@ -82,11 +74,11 @@
     <!-- About Me -->
     <section id="about" class="container-fluid">
         <div class="container">
-            <div class="row wrapper text-center text-md-start">
-                <div id="about-photo" class="col-12 col-lg-4">
+            <div class="row">
+                <div id="about-photo" class="">
                     <img src="assets/img/ashleyhoodie.webp" alt="photo of Ashley Yearicks">
                 </div>
-                <div id="about-text" class="col-12 col-lg-8">
+                <div id="about-text" class="">
                     <h3>about.me</h3>
                     <p>
                         Coming from a data entry background, I've been fiddling with HTML and CSS since back in the old days of 'Geocities.' 
@@ -102,7 +94,6 @@
                     </p>
                     <a href="#contact" class="btn" role="button">contact.me</a>
                 </div>
-               
             </div>
         </div>
     </section>
@@ -112,44 +103,44 @@
     <section id="tech-stack">
         <div class="container">
             <h3>tech.stack</h3>
-            <div class="row text-center mt-5">
-                <div class="col-6 col-md-3 col-lg-2 pb-2 pb-sm-4">
+            <div class="row">
+                <div class="">
                     <i class="fab fa-html5"></i>
                     <p>html</p>
                 </div>
-                <div class="col-6 col-md-3 col-lg-2 pb-2 pb-sm-4">
+                <div class="tech-stack-icons">
                     <i class="fab fa-css3"></i>
                     <p>css</p>
                 </div>
-                <div class="col-6 col-md-3 col-lg-2 pb-2 pb-sm-4">
+                <div class="tech-stack-icons">
                     <i class="fab fa-js"></i>
                     <p>javascript</p>
                 </div>
-                <div class="col-6 col-md-3 col-lg-2 pb-2 pb-sm-4">
+                <div class="tech-stack-icons">
                     <i class="fab fa-bootstrap"></i>
                     <p>bootstrap</p>
                 </div>
-                <div class="col-6 col-md-3 col-lg-2 pb-2 pb-sm-4">
+                <div class="tech-stack-icons">
                     <i class="fab fa-github"></i>
                     <p>github</p>
                 </div>
-                <div class="col-6 col-md-3 col-lg-2 pb-2 pb-sm-4">
+                <div class="tech-stack-icons">
                     <i class="fab fa-font-awesome"></i>
                     <p>font.awesome</p>
                 </div>
-                <div class="col-6 col-md-3 col-lg-2 pb-2 pb-sm-4">
+                <div class="tech-stack-icons">
                     <i class="fab fa-firefox-browser"></i>
                     <p>firefox</p>
                 </div>
-                <div class="col-6 col-md-3 col-lg-2 pb-2 pb-sm-4">
+                <div class="tech-stack-icons">
                     <i class="fab fa-chrome"></i>
                     <p>chrome</p>
                 </div>
-                <div class="col-6 col-md col-lg-2 pb-2 pb-sm-4">
+                <div class="tech-stack-icons">
                     <i class="fab fa-google"></i>
                     <p>google</p>
                 </div>
-                <div class="col-6 col-md col-lg-2 pb-2 pb-sm-4">
+                <div class="tech-stack-icons">
                     <i class="fab fa-wordpress"></i>
                     <p>wordpress</p>
                 </div>
@@ -164,10 +155,10 @@
             <h3>projects</h3>
 
             <div class="row">
-                <div class="col-12">
+                <div class="column">
                     <div class="card">
                         <img src="assets/img/screenCaps/crystalGemsDesktop.webp" class="card-img-top" alt="Screenshot of website for Crystal Gems">
-                        <div class="card-body text-center text-lg-end">
+                        <div class="card-body">
                             <h4 class="card-title">crystal gems crime fighting agency</h4>
                             <p class="card-text">
                                 This project was designed by me and features the Crystal Gems from the cartoon Steven Universe. I used this project to practice
@@ -178,10 +169,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="column">
                     <div class="card flex-lg-row-reverse">
                         <img src="assets/img/screenCaps/wildfireScreenshot.webp" class="card-img-top" alt="Screenshot of a webapp for wildfires around Earth">
-                        <div class="card-body text-center text-lg-start">
+                        <div class="card-body">
                             <h4 class="card-title">Wildfire Tracker</h4>
                             <p class="card-text">Built with Create-React-App and deployed on Netlify, this app tracker was a project to get me adjusted to React. 
                                 I focused on learning about React Hooks and how to use .env variables. I'm really happy with the final look.</p>
@@ -193,10 +184,10 @@
             </div>
             
             <div class="row">
-                <div class="col-12">
+                <div class="column">
                     <div class="card">
                         <img src="assets/img/screenCaps/bookmarkDesktop.webp" class="card-img-top" alt="Screenshot of website for Bookmark company">
-                        <div class="card-body text-center text-lg-end">
+                        <div class="card-body">
                             <h4 class="card-title">Bookmark landing page</h4>
                             <p class="card-text">
                                 'Bookmark' Landing page is another coding challenge by <a href="https://www.frontendmentor.io" target="_blank" rel="noreferrer" class="ref-links">Frontend Mentor</a>. 
@@ -207,10 +198,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="card flex-lg-row-reverse">
+                <div class="column">
+                    <div class="card">
                         <img src="assets/img/screenCaps/huddleDesktop.webp" class="card-img-top" alt="Screenshot of website for Huddle company">
-                        <div class="card-body text-center text-lg-start">
+                        <div class="card-body">
                             <h4 class="card-title">Huddle Landing Page</h4>
                             <p class="card-text">
                                 Huddle Landing Page is a coding challenge by <a href="https://www.frontendmentor.io/" target="_blank" rel="noreferrer" class="ref-links">Frontend Mentor</a>. 
@@ -224,10 +215,10 @@
             </div>
 
             <div class="row">
-                <div class="col-12">
+                <div class="column">
                     <div class="card">
                         <img src="assets/img/screenCaps/drumkitDesktop.webp" class="card-img-top" alt="Screenshot of a drum kit web application">
-                        <div class="card-body text-center text-lg-end">
+                        <div class="card-body">
                             <h4 class="card-title">Drum kit</h4>
                             <p class="card-text">
                                 This is a project from <a href="https://javascript30.com" target="_blank" rel="noreferrer" class="ref-links">30 Days of Javascript</a> by Wes Bos. 
@@ -239,10 +230,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="card flex-lg-row-reverse">
+                <div class="column">
+                    <div class="card">
                         <img src="assets/img/screenCaps/rockDesktop.webp" class="card-img-top" alt="Screenshot of a website for the Rock Academy Company">
-                        <div class="card-body text-center text-lg-start">
+                        <div class="card-body">
                             <h4 class="card-title">Rock Academy</h4>
                             <p class="card-text">
                                 Rock Academy is a music lesson website targeted towards budding musicians of all ages. 
@@ -255,10 +246,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="column">
                     <div class="card">
                         <img src="assets/img/screenCaps/sunnyside-desktop-hero.webp" class="card-img-top" alt="Screenshot of a sunnyside fake company">
-                        <div class="card-body text-center text-lg-end">
+                        <div class="card-body">
                             <h4 class="card-title">sunnyside agency</h4>
                             <p class="card-text">
                                 This is another project from <a href="https://frontendmentor.io" target="_blank" rel="noreferrer" class="ref-links">Frontend Mentor</a>. 
@@ -269,10 +260,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="card flex-lg-row-reverse">
+                <div class="column">
+                    <div class="card">
                         <img src="assets/img/screenCaps/fylo-desktop.png" class="card-img-top" alt="Screenshot of website for Fylo Company">
-                        <div class="card-body text-center text-lg-start">
+                        <div class="card-body">
                             <h4 class="card-title">Fylo Landing Page</h4>
                             <p class="card-text">
                                 The Fylo Landing Page is a coding challenge by <a href="https://www.frontendmentor.io/" target="_blank" rel="noreferrer" class="ref-links">Frontend Mentor</a>. 
@@ -285,10 +276,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="column">
                     <div class="card">
                         <img src="assets/img/screenCaps/desktop-calculator-screen.png" class="card-img-top" alt="Screenshot of a dark calculator">
-                        <div class="card-body text-center text-lg-end">
+                        <div class="card-body">
                             <h4 class="card-title">Javascript Calculator</h4>
                             <p class="card-text">
                                 This was a project that tested my vanilla Javascript skills. Originally a challenge by <a href="https://www.frontendmentor.io" target="_blank" rel="noreferrer" class="ref-links">Frontend Mentor</a>, 
@@ -310,18 +301,18 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-10 col-md-8 mx-auto">
+                <div class="column">
                     <form action="https://formspree.io/f/mbjpdevb" method="POST">
-                        <div class="mb-3">    
-                            <label for="name" class="visually-hidden form-label">name:</label>
+                        <div class="contact-field">    
+                            <label for="name" class="hidden form-label">name:</label>
                             <input type="text" name="name" id="name" for="name" class="form-control" placeholder="name" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="visually-hidden form-label">email:</label>
+                        <div class="contact-field">
+                            <label for="email" class="hidden form-label">email:</label>
                             <input type="email" name="email" id="email" for="email" class="form-control" placeholder="e.mail" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="message" class="visually-hidden form-label">message:</label>
+                        <div class="contact-field">
+                            <label for="message" class="hidden form-label">message:</label>
                             <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="message"></textarea>
                         </div>
                         <div class="text-center">
@@ -330,8 +321,8 @@
                     </form> 
                 </div>
             </div>
-            <div class="row mt-5 text-center">
-                <div class="col-8 col-sm-12 col-md-8 mx-auto mt-0 mt-md-5">
+            <div class="row">
+                <div class="contact-column">
                     <a class="btn" href="mailto:ashley.yearicks@gmail.com?subject=Portfolio Contact" role="button">
                         <i class="fas fa-fw fa-envelope"></i>
                     </a>
@@ -352,15 +343,13 @@
 
       <!-- Footer -->
     <footer>
-        <section class="copyright text-center text-white pb-5">
+        <section class="copyright">
             <div class="container">
                 <small>Designed and Coded with ❤️ by Ashley Yearicks</small>
             </div>
         </section>
     </footer>
 
-    <!-- Required Scripts -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Menu JS -->
     <script src="assets/js/menu.js"></script>
 </body>
