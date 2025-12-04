@@ -1,4 +1,4 @@
-# Ashley Yearicks - Junior Front End Web Developer
+# Ashley Yearicks - Front End Web Developer
 
 This is my personal portfolio website. Go ahead and poke around.
 
@@ -6,7 +6,7 @@ Currently looking for a remote position!
 
 ## Table of contents
 
-- [Ashley Yearicks - Junior Front End Web Developer](#ashley-yearicks---junior-front-end-web-developer)
+- [Ashley Yearicks - Front End Web Developer](#ashley-yearicks---front-end-web-developer)
   - [Table of contents](#table-of-contents)
     - [Screenshots](#screenshots)
     - [Links](#links)
@@ -57,4 +57,3 @@ This was a great exercise in trying to put myself on a website. From font choice
 ## Author
 
 - Website - [Ashley Yearicks](https://yearicks.dev)
-- Twitter - [@jessarin5](https://www.twitter.com/jessarin5)
